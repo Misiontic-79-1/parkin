@@ -45,9 +45,9 @@ aside .item a{
 
 #Registrarme{
     width: 150px;
-    height: 30px;
-    background-color:  orangered;
-    border-radius: 10%;
+	height: 40px;
+	background-color: orangered;
+	border-radius: 50px;
 }
 
 .textblue{
