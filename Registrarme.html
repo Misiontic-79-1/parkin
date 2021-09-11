@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yo Parqueo</title>
+    <link rel="icon" href="Icon.svg" type="image/png">
+    <link rel="stylesheet" type="text/css" href="Estilo_Inicio_sesion.css">
+</head>
+<body>
+    <div class="Cuerpo">
+        <a class="cerrar" href="Index.html"><input type="button" value=""></a>
+        <div class="Logo">
+           <a href="Index.html"> <img src="logo-app.svg" alt="Logo"></a>
+        </div>
+        <p><b id="crear">Crea tu cuenta</b></p>
+        <form >
+            <div class="Inicioinput">
+                <div class="inpgroup">
+                    <div class="inpsingle">
+                        <label for="Nombre"><b>Usuario</b></label>
+                        <div>
+                            <input class="User" type="text" name="Nombre" placeholder="Nombre" required>
+                        </div>
+                    </div>
+                    <div class="inpsingle">
+                        <label for="email"><b>Correo electrónico</b></label>
+                        <div>
+                            <input class="User" type="email" name="email" placeholder="Ejemplo@gmail.com" required>
+                        </div>
+                    </div>
+                </div>
+                <div class="inpgroup">
+                    <div class="inpsingle">
+                        <label for="Contraseña"><b>Contraseña</b></label>
+                        <div>
+                            <input class="User" type="password" name="pass" placeholder="Contraseña" required>
+                        </div>
+                    </div>
+                    <div class="inpsingle">
+                        <label for="Confirmar"><b>Confirmar contraseña</b></label>
+                        <div>
+                            <input class="User" type="password" name="pass" placeholder="Contraseña" required>
+                        </div>
+                    </div>
+                </div>
+                <div class="inpgroup">
+                    <div class="inpsingle">
+                        <label for="Celular"><b>Celular</b></label>
+                        <div>
+                            <input class="User" type="tel" name="Celular" placeholder="Celular" required>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="Iniciobutton">
+                <div class="Iniciar">
+                    <button value="1" name="login" type="submit">Registrarme</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
