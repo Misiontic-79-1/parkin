@@ -54,22 +54,23 @@ aside .item a{
 }
 nav{
     margin: 10px 0 0 0;
-    padding: 20px 0;
+    padding: 30px 0;
     background-color: white;
-    display: block;
 }
 nav .menu {
-    list-style: none;
-    padding: 0;
-    width: 90%;
-    max-width: 1000px;
-    margin: auto;
+    display: flex;
+    justify-content: space-between;
 }
 nav .menu li {
     padding: 0 30px;
     display: inline-block;
 }
-
+.contacto{
+    width: 20px;
+}
+nav .menu li input{
+    width: 400px;
+} 
 #button{
     background: url(lupa.png) no-repeat 0px 5px;
     background-size: 20px;  
@@ -79,13 +80,13 @@ nav .menu li {
     border-radius: 50%;
 }
 .Gmap{
-    background-color: lightgray;
+    background-color: rgb(231, 240, 246);
     width: 100%;
     padding: 20px;
 }
 .mapa{
     width: 1120px; 
-    height: 560px;
+    height: 540px;
     border:0;
 }
 footer{
@@ -94,4 +95,47 @@ footer{
     display: flex;
     justify-content: center;
     
+}
+.articulo{
+    background-color: rgb(231, 240, 246);
+    width: 100%;
+    padding: 20px;
+}
+.articulo article{
+    display: flex;
+}
+.articulo article section{
+    width: 360px;
+    height: 540px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    margin: 0 20px;
+}
+.articulo article section h3 {
+    color: orangered;
+    padding: 15px;
+}
+.articulo article section .scroll{
+    overflow-y: scroll
+}
+.articulo article section .photo{
+    box-sizing: border-box;
+    padding: 15px 0;
+    margin: 0 auto;
+    display: flex;
+    border-bottom: solid 1px lightgrey;
+}
+.articulo article section .photo img{
+    border-radius: 50%;
+    width: 22%;
+}
+.articulo article section .photo .git{
+    display: flex;
+    align-items: center;
+}
+.articulo article section .photo .git img{
+    width: 20px;
 }
