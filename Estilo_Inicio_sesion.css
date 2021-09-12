@@ -26,6 +26,10 @@ body{
 #crear{
     color: orangered;
 }
+p, 
+label{
+    font-weight: bold;
+}
 a{
     color: blue;
     text-decoration: none;

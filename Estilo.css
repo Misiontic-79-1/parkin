@@ -51,7 +51,7 @@ h3 {
 	justify-content: stretch;
 	align-items: center;
 	align-content: center;
-	margin-top: 80px;
+	margin-top: 78px;
 	padding: 20px;
 	align-content: center;
 	box-sizing: content-box;
@@ -234,14 +234,19 @@ main {
 	align-items: center;
 	padding: 30px 0 30px 0;
 	box-sizing: content-box;
+	position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
 }
 
 #contenedor_pp {
 	order: 1;
 	flex-grow: 3;
 	background-color: #E7F0F6;
-	height: 100vh;
+	height: 100%;
 	box-sizing: content-box;
+	margin-left: 226px;
 }
 
 .contenedor {
@@ -249,10 +254,8 @@ main {
 	flex-direction: row;
 	flex-wrap: wrap;
 	justify-content: space-between;
-	align-items: center;
-	align-content: space-around;
-	margin-top: 130px;
-	padding: 20px;
+	margin-top: 115px;
+    padding: 10px 20px;
 	align-content: center;
 	align-items: center;
 	box-sizing: content-box;
@@ -329,8 +332,6 @@ main {
 
 .navbar-principal {
 	display: flex;
-	position: fixed;
-	width: 100%;
 }
 
 .contenedor-principal {
@@ -340,7 +341,7 @@ main {
 }
 
 body {
-	background-color: dodgerblue;
+	background-color: #E7F0F6;
 	font-family: 'Roboto Condensed', sans-serif;
 	font-size: 18px;
 	padding: 0;
@@ -400,12 +401,16 @@ nav {
 	background-color: white;
 	align-content: center;
 	box-shadow: 5px 5px 10px rgba(51, 75, 117, 0.2);
+	position: fixed;
+    width: 100%;
+	display: flex;
 }
 
 nav .menu {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	width: 80%;
 }
 
 nav .menu li {
