@@ -12,7 +12,9 @@ body{
     flex-direction: column;
     align-items: center;
     margin-top: 50px;
-    padding: 0 5px;
+    padding: 50px;
+	border-radius:15px;
+	box-shadow:5px 5px 10px rgba(51, 75, 117, 0.2);
 }
 .Cuerpo form{
     display: contents;
