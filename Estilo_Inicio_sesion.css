@@ -39,7 +39,7 @@ a{
 }
 .cerrar input{
     display: block;
-    background: url(cerrar.png) no-repeat 0px 5px ;
+    background: url(img/cerrar.png) no-repeat 0px 5px ;
     background-size: 20px;  
     height: 25px;
     width: 25px;

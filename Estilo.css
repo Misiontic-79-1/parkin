@@ -116,19 +116,25 @@ input[type=text]::placeholder {
 }
 
 .item-panel-largo {
-	display: flex;
 	flex-direction: row;
-	flex-wrap: wrap;
-	justify-content: center;
-	align-items: center;
-	align-content: flex-start;
-	box-sizing: box;
-	flex-wrap: wrap;
-	margin-top: 20px;
-	display: flex;
-	width: 100%;
-	height: auto;
-	align-items: center;
+    justify-content: center;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    display: flex;
+    width: 100%;
+    height: auto;
+    align-items: center;
+}
+
+.menu-lateral_item{
+	font-size: 20px;
+    overflow: hidden;
+    display: flex;
+    padding: 20px 40px;
+}
+.backgroundblue{
+	background-color: #003EA8;
 }
 
 .contenedor-selector {
@@ -181,28 +187,28 @@ input[type=text]::placeholder {
 }
 
 .imagen_carro_ocupado {
-	background-image: url("ocupado-carro.png");
+	background-image: url("img/ocupado-carro.png");
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-size: contain;
 }
 
 .imagen_carro_disponible {
-	background-image: url("disponible-carro.png");
+	background-image: url("img/disponible-carro.png");
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-size: contain;
 }
 
 .imagen_moto_ocupado {
-	background-image: url("ocupado-motos.png");
+	background-image: url("img/ocupado-motos.png");
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-size: contain;
 }
 
 .imagen_moto_disponible {
-	background-image: url("disponible-motos.png");
+	background-image: url("img/disponible-motos.png");
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-size: contain;
@@ -333,6 +339,12 @@ main {
 .navbar-principal {
 	display: flex;
 }
+.navbar-db{
+	display: flex;
+    border-top: none;
+    background-color: #0044AA;
+    color: white;
+}
 
 .contenedor-principal {
 	display: flex;
@@ -369,7 +381,6 @@ body {
 .item a {
 	display: block;
 	text-align: center;
-	text-decoration: none;
 }
 
 #Registrarme {
@@ -389,10 +400,12 @@ body {
 
 .textblue {
 	color: #0044AA;
+	text-decoration: none;
 }
 
 .textwhite {
 	color: white;
+	text-decoration: none;
 }
 
 nav {
