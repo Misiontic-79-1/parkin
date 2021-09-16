@@ -47,6 +47,13 @@ a:hover {
 	border: 1px solid #003EA8 !important;
 }
 
+.navbar-custom {
+	border-top: #003EA8 8px solid;
+	background-color: #fff;
+	box-shadow: 5px 5px 10px rgba(51, 75, 117, 0.2);
+	padding: 10px 0 10px 0;
+}
+
 body {
 	background: #E7F0F6;
 	font-family: 'Roboto condensed', sans-serif;
