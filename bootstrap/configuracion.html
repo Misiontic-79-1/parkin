@@ -42,11 +42,6 @@
                             </a>
                         </li>
                         <li class="nav-item mb-3">
-                            <a href="" class="nav-link align-middle">
-                            <span>Casillero</span>
-                            </a>
-                        </li>
-                        <li class="nav-item mb-3">
                             <a href="configuracion.html" class="  nav-link align-middle active">
                             <span>Configuracion</span>
                             </a>
@@ -64,90 +59,81 @@
                 <div class="container-fluid fw-bold">
                     <ul class="navbar-nav p-2">
                         <li class="nav-item">
-                            <span class="nav-link text-white"><img src="assets/img/icono-parqueadero.png" /> Parqueaderos Nombre direccion</span>
+                            <span class="nav-link text-white"><img src="assets/img/icono-parqueadero.png" /> Nombre Parqueadero</span>
                         </li>
                     </ul>
-                    <ul class="navbar-nav p-2">
-                        <li class="nav-item">
-                            <span class="nav-link text-white"> Nombre de usuario</span>
-                        </li>
-                        <li>
-                            <button class="btn bg-secondary text-white rounded-circle" type="submit"><i class="fas fa-cog"></i></button>
-                        </li>
-                    </ul>
+                    <div class="d-flex align-items-end text-white">
+                        <span> Nombre de Usuario <i class="fas fa-user-cog"></i></span>
+                     </div>
                 </div>
             </nav>
-            <div class="d-flex flex-column align-items-center p-4 margen-top">
-
-                <div class=" d-flex my-2 p-3 align-self-start">
-                    <div class="bg-white mx-4 rounded-3 px-3" ><h5 class="m-0">Miércoles 11 de septiembre</h5></div>
-                    <div class="bg-white mx-4 rounded-3 px-3"><h3 class="m-0">14:03</h3></div>
-                 </div>
-                
-                <nav>
-                    <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                      <button class="nav-link active" id="nav-config_par-tab" data-bs-toggle="tab" data-bs-target="#nav-gonfig_par" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Configuracion de parqueadero</button>
-                      <button class="nav-link" id="nav-config_user-tab" data-bs-toggle="tab" data-bs-target="#nav-config_user" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Configuracion de usuario</button>
-                    </div>
-                </nav>
-                <div class="tab-content bg-white w-85 rounded-4 h-400" id="nav-tabContent">
-                    <div class="tab-pane fade show active" id="nav-gonfig_par" role="tabpanel" aria-labelledby="nav-config_par-tab">
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe iusto perspiciatis, dolorum praesentium voluptatem quasi animi provident repudiandae corrupti eos est aliquam ex in sit hic et cumque beatae magni!
-                        </p>
-                    </div>
-                    <div class="tab-pane fade p-3" id="nav-config_user" role="tabpanel" aria-labelledby="nav-config_user-tab">
-                        <div class="h-350 p-2 overflow-auto">
-                            <table class="table table-hover table-bordered border-secondary m-0 text-center">
-                                <thead class="table-secondary table-bordered border-secondary" >
-                                <tr>
-                                    <th scope="col">ID</th>
-                                    <th scope="col">Nombre</th>
-                                    <th scope="col">Usuario</th>
-                                    <th scope="col">Contraseña</th>
-                                    <th scope="col">Tipo de usuario</th>
-                                    <th scope="col">Accioin</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <tr>
-                                    <th scope="row">1</th>
-                                    <td>Usuario1</td>
-                                    <td>Usuario1</td>
-                                    <td>Contraseña</td>
-                                    <td>Administrador</th>
-                                    <th>
-                                        <button type="submit" class="btn btn-primary bg-primary text-white rounded-pill">Editar</button>
-                                        <button type="submit" class="btn btn-primary bg-primary text-white rounded-pill">Eliminar</button>
-                                    </th>
-                                </tr>
-                                <tr>
-                                    <th scope="row">2</th>
-                                    <td>Usuario1</td>
-                                    <td>Usuario1</td>
-                                    <td>Contraseña</td>
-                                    <td>Administrador</th>
-                                    <th>
-                                        <button type="submit" class="btn btn-primary bg-primary text-white rounded-pill">Editar</button>
-                                        <button type="submit" class="btn btn-primary bg-primary text-white rounded-pill">Eliminar</button>
-                                    </th>
-                                </tr>
-                                <tr>
-                                    <th scope="row">3</th>
-                                    <td>Usuario1</td>
-                                    <td>Usuario1</td>
-                                    <td>Contraseña</td>
-                                    <td>Administrador</th>
-                                    <th>
-                                        <button type="submit" class="btn btn-primary bg-primary text-white rounded-pill">Editar</button>
-                                        <button type="submit" class="btn btn-primary bg-primary text-white rounded-pill">Eliminar</button>
-                                    </th>
-                                </tr>
-                                </tbody>
-                            </table>
+            <div class="d-flex justify-content-center margen-top">
+                <div class="w-85">                
+                    <nav>
+                        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                        <button class="nav-link active" id="nav-config_par-tab" data-bs-toggle="tab" data-bs-target="#nav-gonfig_par" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Configuracion de parqueadero</button>
+                        <button class="nav-link" id="nav-config_user-tab" data-bs-toggle="tab" data-bs-target="#nav-config_user" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Configuracion de usuario</button>
                         </div>
-                        <div>
-                            <button type="submit" class="btn btn-primary bg-primary text-white rounded-pill">Agregar</button>
+                    </nav>
+                    <div class="tab-content bg-white rounded-4 h-400" id="nav-tabContent">
+                        <div class="tab-pane fade show active" id="nav-gonfig_par" role="tabpanel" aria-labelledby="nav-config_par-tab">
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe iusto perspiciatis, dolorum praesentium voluptatem quasi animi provident repudiandae corrupti eos est aliquam ex in sit hic et cumque beatae magni!
+                            </p>
+                        </div>
+                        <div class="tab-pane fade p-3" id="nav-config_user" role="tabpanel" aria-labelledby="nav-config_user-tab">
+                            <div class="h-350 p-2 overflow-auto">
+                                <table class="table table-hover m-0 text-center">
+                                    <thead class="table-secondary" >
+                                    <tr>
+                                        <th scope="col">ID</th>
+                                        <th scope="col">Nombre</th>
+                                        <th scope="col">Usuario</th>
+                                        <th scope="col">Contraseña</th>
+                                        <th scope="col">Tipo de usuario</th>
+                                        <th scope="col">Accioin</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <th scope="row">1</th>
+                                        <td>Usuario1</td>
+                                        <td>Usuario1</td>
+                                        <td>Contraseña</td>
+                                        <td>Administrador</th>
+                                        <th>
+                                            <button type="submit" class="btn btn-primary bg-primary text-white rounded-pill">Editar</button>
+                                            <button type="submit" class="btn btn-primary bg-primary text-white rounded-pill">Eliminar</button>
+                                        </th>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">2</th>
+                                        <td>Usuario1</td>
+                                        <td>Usuario1</td>
+                                        <td>Contraseña</td>
+                                        <td>Administrador</th>
+                                        <th>
+                                            <button type="submit" class="btn btn-primary bg-primary text-white rounded-pill">Editar</button>
+                                            <button type="submit" class="btn btn-primary bg-primary text-white rounded-pill">Eliminar</button>
+                                        </th>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">3</th>
+                                        <td>Usuario1</td>
+                                        <td>Usuario1</td>
+                                        <td>Contraseña</td>
+                                        <td>Administrador</th>
+                                        <th>
+                                            <button type="submit" class="btn btn-primary bg-primary text-white rounded-pill">Editar</button>
+                                            <button type="submit" class="btn btn-primary bg-primary text-white rounded-pill">Eliminar</button>
+                                        </th>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="d-flex justify-content-end">
+                                <button type="submit" class="btn btn-primary bg-primary text-white rounded-pill">Agregar</button>
+                            </div>
                         </div>
                     </div>
                 </div>
