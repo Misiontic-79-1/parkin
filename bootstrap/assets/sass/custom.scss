@@ -2,7 +2,12 @@ $primary: #FF6600;
 $secondary: #003EA8;
 $light: #D1E1EC;
 $dark:  #E7F0F6;
-
+$nav-tabs-link-active-color: #000;
+$nav-tabs-link-active-bg:#fff;
+$component-active-color: #fff;
+$component-active-bg: $secondary;
+$link-color: $secondary;
+$link-hover-color: $primary;
 
 .margen-left{
 	margin-left: 15% !important;
@@ -17,10 +22,6 @@ $dark:  #E7F0F6;
 	margin-top: 78px !important;
 }
 
-a:hover {
-	color: #FF6600 !important;
-}
-
 .btn-primary {
 	border: none;
 }
@@ -31,6 +32,12 @@ a:hover {
 
 .h-500{
 	height: 520px;
+}
+.h-400{
+	height: 400px;
+}
+.h-350{
+	height: 320px;
 }
 
 .btn-primary:hover {
