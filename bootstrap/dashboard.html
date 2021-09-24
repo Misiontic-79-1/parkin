@@ -18,6 +18,24 @@
       <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
       <link rel="stylesheet" type='text/css' href="./assets/css/reducido.css">
       <script src='node_modules/bootstrap/js/dist/base-component.js'></script>
+      <script>
+         window.addEventListener('load', function() {
+            document.getElementById ('ingresarVehiculo').onclick = function () {
+                  let valorPlaca = document.getElementById ('consultar-placa').value
+                  var ingresarPlaca = ''
+                  ingresarPlaca = valorPlaca
+                  document.getElementById ('placaVehiculo').innerHTML = ingresarPlaca
+              };
+             
+               
+       
+      
+          
+})
+              
+function carroOcupao() {
+         document.getElementById('item-carro').className = 'item-carro imagen_carro_disponible' .replace = 'item-carro imagen_carro_ocupado';}
+         </script>
    </head>
    <body class="bg-dark">
       <div class="container-fluid">
@@ -92,22 +110,27 @@
                   <div>Celdas disponibles Moto</div>
                   <div class="fuente-vehiculo"><i class="fas fa-motorcycle"></i>9/15</div>
                </div>
+               
                <div class="item-panel fondo-placa" id="placa">
-                  <div class="ingresar-placa"><input type="text" id="consultar-placa" name="consultar-placa" required
+                  <form>
+                  <div class="ingresar-placa"><input  type="text" id="consultar-placa" name="consultar-placa" 
                      minlength="" maxlength="" size="" placeholder="Placa"></div>
-                  <div><a href="#"><input class="btn btn-primary text-dark rounded-pill" id="Registrarme" type="button"
+                  <div><a href="#"><input class="btn btn-primary text-dark rounded-pill" id="ingresarVehiculo" type="button"
                      value="Ingresar" data-bs-toggle="modal" data-bs-target="#iniciarSesionModal"></a></div>
+                  </form>
                </div>
+            
                <div class="contenedor-panel-largo">
                   <div class="contenedor-selector">
                      <ul id="selector">
                         <li>VER</li>
-                        <li><a class="activo" href="dashboard.html"><i class="fas fa-car"></i></a></li>
-                        <li><a href="dashboard-moto.html"><i class="fas fa-motorcycle"></a></i></li>
+                        <li><a type="button" class="activo"  onclick="document.getElementById('item-carro').remove() "><i class="fas fa-car"></i></a></li>
+                        <li><a type="button" class=""  onclick="carroOcupao()"><i class="fas fa-motorcycle"></a></i></li>
                      </ul>
                   </div>
+                
                   <div class="item-panel-largo">
-                     <div class="item-carro imagen_carro_disponible">
+                     <div id="item-carro" class="item-carro imagen_carro_disponible">
                         <span class="id_parqueadero">1</span>
                      </div>
                      <div class="item-carro imagen_carro_disponible">
@@ -176,7 +199,7 @@
                            <div class="row">
                               <div class="col-md-4">
                                  <span class="text-muted">Placa</span>
-                                 <h3>FXM257</h3>
+                                 <h3 id="placaVehiculo"></h3>
                                  <hr>
                               </div>
                               <div class="col-md-4">
@@ -256,6 +279,7 @@
          </div>
       </div>
    </body>
+  
    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
 </html>
 
