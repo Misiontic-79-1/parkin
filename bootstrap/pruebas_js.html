@@ -145,11 +145,28 @@ function carroOcupao() {
                      <ul id="selector">
                         <li>VER</li>
                         <li><a type="button" class="activo"  onclick="document.getElementById('item-carro').remove() "><i class="fas fa-car"></i></a></li>
+                        <li><a type="button" class="activo"  onclick="this.innerHTML=Date()">Donde estoy?</li>
                         <li><a type="button" class=""  onclick="carroOcupao()"><i class="fas fa-motorcycle"></a></i></li>
                      </ul>
                   </div>
                 
                   <div class="item-panel-largo">
+                     <div class="bg-black container-fluid" id="contenedorJavaScript">
+                        
+                        <script>
+                           let ul = document.createElement("ul")
+                           ul.setAttribute("id","idUl");
+                           let li1 = document.createElement('li');
+                           li1.innerHTML = "texto LI1 <a href='https://www.google.com' target='blank'>ir a google</a>"
+                           let li2 = document.createElement('li');
+                           li2.innerHTML = "texto LI2"
+                           ul.innerHTML = li1.outerHTML;
+                           ul.appendChild(li2);
+                           let contenedor = document.getElementById("contenedorJavaScript");
+                           contenedor.appendChild(ul);
+                           alert.log("ya valimos")
+                        </script>
+                     </div>
                      <div id="item-carro" class="item-carro imagen_carro_disponible">
                         <span class="id_parqueadero">1</span>
                      </div>
