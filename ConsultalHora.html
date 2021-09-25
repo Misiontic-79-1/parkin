@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="Carlos Andres Amaya">
+      <title>Tiempo_Recorrido</title>
+	  <link rel="icon" href="img//Icon.svg" type="image/png">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Anton&family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+      <link rel="stylesheet" type="text/css" href="assets/css/custom.css">
+      <link rel="stylesheet" type="text/css" href="assets/css/EstiloHora.css">
+      <link rel="stylesheet" type="text/css" href="assets/css/reducido.css">
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+   
+   </head>
+   <body>
+      <script>function actual() {
+         fecha=new Date(); //Actualizar fecha.
+         hora=fecha.getHours(); //hora actual
+         minuto=fecha.getMinutes(); //minuto actual
+         segundo=fecha.getSeconds(); //segundo actual
+         if (hora<10) { //dos cifras para la hora
+            hora="0"+hora;
+            }
+         if (minuto<10) { //dos cifras para el minuto
+            minuto="0"+minuto;
+            }
+         if (segundo<10) { //dos cifras para el segundo
+            segundo="0"+segundo;
+            }
+         //ver en el recuadro del reloj:
+         mireloj = hora+" : "+minuto+" : "+segundo;	
+                 return mireloj; 
+         }
+     function actualizar() { //función del temporizador
+     mihora=actual(); //recoger hora actual
+     mireloj=document.getElementById("reloj"); //buscar elemento reloj
+     mireloj.innerHTML=mihora; //incluir hora en elemento
+     }
+     setInterval(actualizar,1000); //iniciar temporizador</script>
+       <main>
+        <div class="menu-lateral">
+            <div id="Logo">
+               <a href="dashboard.html"><img id="Imagen" src="img//logo-app.svg" alt="Logo" title="Logo"></a>
+            </div>
+            <div class="menu-lateral_item backgroundblue">
+               <a class="textwhite" href="dashboard.html">Tablero Principal</a>
+            </div>
+            <div class="menu-lateral_item">
+               <a class="textblue" href="dashboard.html">Estadisticas</a>
+            </div>
+            <div class="menu-lateral_item">
+               <a class="textblue" href="dashboard.html">Reservas</a>
+            </div>
+            <div class="menu-lateral_item">
+               <a class="textblue" href="dashboard.html">Casillero</a>
+            </div>
+            <div class="menu-lateral_item">
+               <a class="textblue" href="dashboard-config.html">Configuracion</a>
+            </div>
+            <div class="menu-lateral_item">
+               <a class="textblue" href="dashboard.html">Salir</a>
+            </div>
+         </div>
+         <div id="contenedor_pp">
+            <nav class="navbar-db">
+               <ul class="menu">
+                  <li><img src="img//icono-parqueadero.png"/> Parqueaderos disponibles</li>
+                  <li><img src="img//icono-carro.png"/> Tu ubicacion actual</li>
+                  <li><input type="search" name="busqueda" placeholder="Ingresa una dirección" class="input-text"><button type="submit" value="" id="button" name="button"><i class="fas fa-search"></i></button>
+                  </li>
+                  <li class="textblue">Limpiar</li>
+               </ul>
+            </nav>
+            <div class="contenedor">
+               
+               <div class="item-panel bg-success">
+                  <div class="text-light">Miércoles 11 de septiembre</div>
+                  
+                  <div class="item-panel2 bg-dark">
+                   <div class="text-info fs-2 reloj1"  id="reloj"  >14:03</div>
+                  </div>
+               </div>            
+               <div class="item-panel bg-success">
+                  <div class="text-light">PRECIO FRACCIÓN HORA</div>
+                  <div class="text-light"><i class="fas fa-motorcycle "></i>$ 3.000</div>
+               </div>
+               <div class="item-panel fondo-PICO">
+                  <div>PICO Y PLACA HOY</div>
+                  <div class="fuente-vehiculo"><i class="fas fa-motorcycle"></i>0-9-1</div>
+               </div>
+               <div class="item-panel bg-warning">
+                  <div class="fuente-vehiculo text-dark"> PLACA <hr class="style1"> </div>  
+                  <div class="fuente-vehiculo text-dark">KJP86B</div>                                
+               </div>
+                
+               <div class="contenedor-panel-largo" style="padding-left: 50px;width: 1075px;height: 450px;">
+                  
+                  <div class="contenedor-selector">
+                     <div class="item-panel3 fondo-reloj" style="
+                     height: 400px"
+                     >
+                        <div class="fuente-vehiculo">Hora de ingreso<hr color = "GRAY" size = 2></div>
+                        <div id="reloj" class="reloj">13:15:08</div>
+                     </div>
+                     <div class="item-panel3 fondo-reloj" style="
+                     height: 400px">
+                        <div class="fuente-vehiculo"> Tiempo trancurrido <hr color = "GRAY" size = 2> </div>  
+                        <div id="reloj" class="reloj" > 00 : 00 : 00
+                        </div>                               
+                     </div>                     
+                  </div>  
+                        
+               </div>
+           
+                    
+                      
+                   
+       </main>
+   </body>
