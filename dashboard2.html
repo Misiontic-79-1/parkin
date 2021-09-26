@@ -1,0 +1,391 @@
+
+
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="Lineer Rolong, Narayana Galvis, carlos andres">
+      <title>Yo Parqueo Dashboard</title>
+      <link rel="icon" href="assets/svg/Icon.svg" type="image/svg">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Anton&family=Roboto+Condensed:wght@400;700&display=swap"
+         rel="stylesheet">
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+      <link rel="stylesheet" type='text/css' href="./assets/css/reducido.css">
+      <script src='node_modules/bootstrap/js/dist/base-component.js'></script>
+      <script>
+         window.addEventListener('load', function() {
+            document.getElementById ('ingresarVehiculo').onclick = function () {
+                  let valorPlaca = document.getElementById ('consultar-placa').value
+                  var ingresarPlaca = ''
+                  ingresarPlaca = valorPlaca
+                  document.getElementById ('placaVehiculo').innerHTML = ingresarPlaca
+              };
+             
+               
+       
+      
+          
+})
+              
+function carroOcupao() {
+         document.getElementById('item-carro').className = 'item-carro imagen_carro_disponible' .replace = 'item-carro imagen_carro_ocupado';}
+         </script>
+   </head>
+   <body class="bg-dark">
+      <div class="container-fluid">
+      <div class="row flex-nowrap">
+         <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 text-dark bg-white position-fixed w-15">
+            <div
+               class="d-flex flex-column justify-content-center align-items-center pt-2 text-white min-vh-100 d-none d-sm-block">
+               <a href="/" class="text-secondary nav-link d-flex justify-content-center" aria-current="page">
+               <img class=" p-2 w-80" src="assets/svg/logo-app.svg" />
+               </a>
+               <hr class="bg-light opacity-100">
+               <ul class="nav nav-pills flex-column align-items-center" id="menu">
+                  <li class="nav-item mb-3">
+                     <a href="#" class=" text-secondary nav-link align-middle active" aria-current="page"
+                        >
+                     <span>Tablero principal</span>
+                     </a>
+                  </li>
+                  <li class="nav-item">
+                     <a href="reserva_semana.html" class="text-secondary nav-link align-middle mb-3">
+                     <span>Reservas</span>
+                     </a>
+                  </li>
+                  <li class="nav-item">
+                     <a href="#" class="text-secondary nav-link align-middle mb-3">
+                     <span>Estadísticas</span>
+                     </a>
+                  </li>
+                  <li class="nav-item">
+                     <!--<a href="#"><input class="btn btn-primary text-secondary " id="ingresarVehiculo" type="button"
+                        value="Ingresar" data-bs-toggle="modal" data-bs-target="#reserva1"></a>-->
+                     <a href="#" class="text-secondary nav-link align-middle mb-3">
+                     <span class=" text-secondary " id="ingresarVehiculo" type="link"
+                     value="Ingresar" data-bs-toggle="modal" data-bs-target="#reserva1">Reservas</span>
+                     </a>
+                  </li>
+                  <li class="nav-item">
+                     <a href="#" class="text-secondary nav-link align-middle mb-3">
+                     <span>Configuración</span>
+                     </a>
+                  </li>
+                  <li class="nav-item">
+                     <a href="#" class="text-secondary nav-link align-middle mb-3">
+                     <span>Salir</span>
+                     </a>
+                  </li>
+               </ul>
+            </div>
+         </div>
+         <div class="col p-0 margen-left">
+            <nav
+               class="navbar navbar-custom border-top border-5 border-secondary bg-secondary navbar-expand-lg navbar-dark position-fixed w-85">
+               <div class="container-fluid fw-bold">
+                  <ul class="navbar-nav p-2">
+                     <li class="nav-item">
+                        <span class="nav-link"><img src="assets/img/icono-parqueadero.png" /> Nombre Parqueadero
+                        </span>
+                     </li>
+                  </ul>
+                  <div class="d-flex align-items-end text-dark">
+                     <span> Nombre de Usuario <i class="fas fa-user-cog"></i></span>
+                  </div>
+               </div>
+            </nav>
+            <div class="contenedor-items">
+               <div class="item-panel">
+                  <div>Miércoles 11 de septiembre</div>
+                  <div class="fuente-reloj">14:03</div>
+               </div>
+               <div class="item-panel fondo-carros">
+                  <div>Celdas disponibles Carro</div>
+                  <div class="fuente-vehiculo"><i class="fas fa-car"></i>9/15</div>
+               </div>
+               <div class="item-panel fondo-motos">
+                  <div>Celdas disponibles Moto</div>
+                  <div class="fuente-vehiculo"><i class="fas fa-motorcycle"></i>9/15</div>
+               </div>
+               
+               <div class="item-panel fondo-placa" id="placa">
+                  <form>
+                  <div class="ingresar-placa"><input  type="text" id="consultar-placa" name="consultar-placa" 
+                     minlength="" maxlength="" size="" placeholder="Placa"></div>
+                  <div><a href="#"><input class="btn btn-primary text-dark rounded-pill" id="ingresarVehiculo" type="button"
+                     value="Ingresar" data-bs-toggle="modal" data-bs-target="#iniciarSesionModal"></a></div>
+                  </form>
+               </div>
+            
+               <div class="contenedor-panel-largo">
+                  <div class="contenedor-selector">
+                     <ul id="selector">
+                        <li>VER</li>
+                        <li><a type="button" class="activo"  onclick="document.getElementById('item-carro').remove() "><i class="fas fa-car"></i></a></li>
+                        <li><a type="button" class=""  onclick="carroOcupao()"><i class="fas fa-motorcycle"></a></i></li>
+                     </ul>
+                  </div>
+                
+                  <div class="item-panel-largo">
+                     <div id="item-carro" class="item-carro imagen_carro_disponible">
+                        <span class="id_parqueadero">1</span>
+                     </div>
+                     <div class="item-carro imagen_carro_disponible">
+                        <span class="id_parqueadero">2</span>
+                     </div>
+                     <div class="item-carro imagen_carro_disponible">
+                        <span class="id_parqueadero">3</span>
+                     </div>
+                     <div class="item-carro imagen_carro_disponible">
+                        <span class="id_parqueadero">4</span>
+                     </div>
+                     <div class="item-carro imagen_carro_disponible">
+                        <span class="id_parqueadero">5</span>
+                     </div>
+                     <div class="item-carro imagen_carro_ocupado">
+                        <span class="id_parqueadero">6</span>
+                     </div>
+                     <div class="item-carro imagen_carro_ocupado">
+                        <span class="id_parqueadero">7</span>
+                     </div>
+                     <div class="item-carro imagen_carro_ocupado">
+                        <span class="id_parqueadero">8</span>
+                     </div>
+                     <div class="item-carro imagen_carro_ocupado">
+                        <span class="id_parqueadero">9</span>
+                     </div>
+                     <div class="item-carro imagen_carro_ocupado">
+                        <span class="id_parqueadero">10</span>
+                     </div>
+                     <div class="item-carro imagen_carro_ocupado">
+                        <span class="id_parqueadero">11</span>
+                     </div>
+                     <div class="item-carro imagen_carro_ocupado">
+                        <span class="id_parqueadero">12</span>
+                     </div>
+                     <div class="item-carro imagen_carro_ocupado">
+                        <span class="id_parqueadero">13</span>
+                     </div>
+                     <div class="item-carro imagen_carro_ocupado">
+                        <span class="id_parqueadero">14</span>
+                     </div>
+                     <div class="item-carro imagen_carro_ocupado">
+                        <span class="id_parqueadero">15</span>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <footer class="footer bg-secondary text-white w-100 py-2">
+               <span>© 2021 YoParqueo - todos los derechos reservados</span>
+            </footer>
+         </div>
+      </div>
+      <!-- Modal iniciar ingresar vihiculo -->
+      <div class="modal fade" id="iniciarSesionModal" tabindex="-1" aria-labelledby="iniciarSesionModalLabel"
+         aria-hidden="true">
+         <div class="modal-dialog">
+            <div class="modal-content p-3">
+               <div class="modal-header">
+                  <h3 class="text-primary">Ingresar Vehiculo</h3>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+               </div>
+               <form>
+                  <div class="modal-body">
+                     <div class="mb-3">
+                       
+                           <div class="row">
+                              <div class="col-md-4">
+                                 <span class="text-muted">Placa</span>
+                                 <h3 id="placaVehiculo"></h3>
+                                 <hr>
+                              </div>
+                              <div class="col-md-4">
+                                 <span class="text-muted">Precio hora/Fracción</span>
+                                 <h3>$4.000</h3>
+                                 <hr>
+                              </div>
+                              <div class="col-md-4">
+                                 <span class="text-muted">Hora de ingreso</span>
+                                 <h3>15:17</h3>
+                                
+                           </div>
+                        </div>
+                     
+                       
+                     </div>
+                  </div>
+                  <div class="modal-footer justify-content-center">
+                     <button type="button" class="btn"
+                        data-bs-dismiss="modal">Cancelar</button>
+                     <button type="submit" class="btn btn-primary bg-primary text-white rounded-pill">Ingresar</button>
+                  </div>
+               </form>
+            </div>
+         </div>
+      </div>
+       <!-- reserva -->
+       <div class="modal fade" id="reserva1" tabindex="-1" aria-labelledby="iniciarSesionModalLabel"
+       aria-hidden="true">
+       <div class="modal-dialog">
+          <div class="modal-content p-3">
+             <div class="modal-header">
+                <h3 class="text-primary">Reserva tu Parqueadero</h3>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+             </div>
+             <form>
+                <div class="modal-body">
+                   <div class="mb-3">
+                     
+                         <div class="row">
+                           <div class="contenedor-items">
+                             
+                              <div class="item-panel fondo-carros">
+                                
+                                 <a href="#" class="text-secondary nav-link align-middle mb-3" style="height: 116px; width: 182px;" >
+                                    <span class=" text-secondary pt-0 mt-0" id="ingresarVehiculo" type="link"
+                                    value="Ingresar" data-bs-toggle="modal" data-bs-target="#reserva15min">
+                                       <div class="pt-3 mt-0 pb-0 fondo-carros">Reserva parcial si esta a 15 minutos de distancia</div></span>
+                                     </a>
+                                    
+                                
+                              </div>
+                              <div class="item-panel fondo-carros">
+                                 <div>Reserva total dia y hora de llegada</div>
+                                 
+                              </div>
+                              <div class="item-panel ">
+                                 <div class="pt-2">Calendario</div>
+                                 <div class="pt-2"><img src="assets/img/calendario negro.png" style="height: 75%; width: 75%;" ></div>
+                                 
+                              </div>
+                           </div>
+                           
+                            
+                          
+                      </div>
+                   
+                     
+                   </div>
+                </div>
+                <div class="modal-footer justify-content-center">
+                   <button type="button" class="btn"
+                      data-bs-dismiss="modal">Cancelar</button>
+                   <button type="submit" class="btn btn-primary bg-primary text-white rounded-pill">Ingresar</button>
+                </div>
+             </form>
+          </div>
+       </div>
+    </div>
+
+<!-- reserva15min -->
+<div class="modal fade" id="reserva15min" tabindex="-1" aria-labelledby="registroModalLabel"
+aria-hidden="true">
+<div class="modal-dialog modal-lg">
+   <div class="modal-content p-3">
+      <div class="modal-header">
+         <h3 class="text-primary">Haz tu Reserva</h3>
+         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <form>
+         <div class="modal-body">
+            <div class="row">
+               <div class="col-md-12 text-center mb-3">
+                  <a href="#">
+                  <img class=" p-2 w-80" src="assets/svg/logo-app.svg" />
+                  </a>
+               </div>
+               <div class="col-md-6 mb-3">
+                  <label for="registrarNombre" class="form-label">Placa del Vehiculo</label>
+                  <input type="text" class="form-control" id="registrarNombre">
+               </div>
+               <div class="col-md-6 mb-3">
+                  <label for="registrarCorreo" class="form-label">Nombre completo</label>
+                  <input type="email" class="form-control" id="registrarCorreo">
+               </div>
+               <div class="col-md-6 mb-3">
+                  <label for="registrarContrasena" class="form-label">Celular</label>
+                  <input type="password" class="form-control" id="registrarContrasena">
+                 
+
+               </div>
+              
+              <span class="text-primary">Recuerda llegar al parqueadero dentro de 15 minutos hábiles</span> 
+            <div class="mb-3 form-check">
+               <input type="checkbox" class="form-check-input" id="exampleCheck1">
+               <label class="form-check-label" for="exampleCheck1">Recordarme</label>
+            </div>
+         </div>
+         <div class="modal-footer justify-content-center">
+            <button type="button" class="btn text-primary border border-primary border-1 rounded-pill"
+               data-bs-dismiss="modal">Cancelar</button>
+            <button type="submit" class="btn btn-primary bg-primary text-white rounded-pill">Reservar</button>
+         </div>
+      </form>
+   </div>
+</div>
+</div>
+</body>
+
+      <!-- Modal Registro -->
+      <div class="modal fade" id="registroModal" tabindex="-1" aria-labelledby="registroModalLabel" aria-hidden="true">
+         <div class="modal-dialog modal-lg">
+            <div class="modal-content p-3">
+               <div class="modal-header">
+                  <h3 class="text-primary">Crea tu cuenta</h3>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+               </div>
+               <form>
+                  <div class="modal-body">
+                     <div class="row">
+                        <div class="col-md-12 text-center mb-3">
+                           <a href="#">
+                           <img class=" p-2 w-80" src="assets/svg/logo-app.svg" />
+                           </a>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                           <label for="registrarNombre" class="form-label">Nombre</label>
+                           <input type="text" class="form-control" id="registrarNombre">
+                        </div>
+                        <div class="col-md-6 mb-3">
+                           <label for="registrarCorreo" class="form-label">Email</label>
+                           <input type="email" class="form-control" id="registrarCorreo">
+                        </div>
+                        <div class="col-md-6 mb-3">
+                           <label for="registrarContrasena" class="form-label">Password</label>
+                           <input type="password" class="form-control" id="registrarContrasena">
+                        </div>
+                        <div class="col-md-6 mb-3">
+                           <label for="confirmarContrasena" class="form-label">Confirmar contraseña</label>
+                           <input type="password" class="form-control" id="confirmarContrasena">
+                        </div>
+                        <div class="col-md-12 mb-3">
+                           <label for="registrarCel" class="form-label">Celular</label>
+                           <input type="text" class="form-control" id="registrarCel">
+                        </div>
+                     </div>
+                     <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        <label class="form-check-label" for="exampleCheck1">Recordarme</label>
+                     </div>
+                  </div>
+                  <div class="modal-footer justify-content-center">
+                     <button type="button" class="btn text-primary border border-primary border-1 rounded-pill"
+                        data-bs-dismiss="modal">Registrarme</button>
+                     <button type="submit" class="btn btn-primary bg-primary text-white rounded-pill">Iniciar
+                     sessión</button>
+                  </div>
+               </form>
+            </div>
+         </div>
+      </div>
+   </body>
+  
+   <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</html>
+
