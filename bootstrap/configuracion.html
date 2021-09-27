@@ -72,14 +72,89 @@
                     <nav>
                         <div class="nav nav-tabs" id="nav-tab" role="tablist">
                         <button class="nav-link active" id="nav-config_par-tab" data-bs-toggle="tab" data-bs-target="#nav-gonfig_par" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Configuracion de parqueadero</button>
-                        <button class="nav-link" id="nav-config_user-tab" data-bs-toggle="tab" data-bs-target="#nav-config_user" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Configuracion de usuario</button>
+                        <button class="nav-link" id="nav-config_user-tab" data-bs-toggle="tab" data-bs-target="#nav-config_user" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Configuración usuarios del sistema</button>
                         </div>
                     </nav>
-                    <div class="tab-content bg-white rounded-4 h-400" id="nav-tabContent">
+                    <div class="tab-content bg-white h-auto" id="nav-tabContent">
                         <div class="tab-pane fade show active" id="nav-gonfig_par" role="tabpanel" aria-labelledby="nav-config_par-tab">
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe iusto perspiciatis, dolorum praesentium voluptatem quasi animi provident repudiandae corrupti eos est aliquam ex in sit hic et cumque beatae magni!
-                            </p>
+                            <div class="container-fluid p-5">
+
+                                <form class="row g-3">
+                                    
+                                    <div class="col-md-6">
+                                        <label for="usuario" class="form-label">Usuario</label>
+                                        <div class="input-group">
+                                          <div class="input-group-text">@</div>
+                                          <input type="text" class="form-control" id="usuario" placeholder="Nombre de usuario administrador">
+                                        </div>
+                                      </div>
+
+                                      <div class="col-md-6">
+                                        <label for="inputEmail4" class="form-label">Correo Electrónico</label>
+                                        <input type="email" class="form-control" id="inputEmail4">
+                                      </div>
+
+                                    <div class="col-md-6">
+                                      <label for="inputPassword4" class="form-label">Contraseña</label>
+                                      <input type="password" class="form-control" id="inputPassword4">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="confirmarContrasenia" class="form-label">Confirmar Contraseña</label>
+                                        <input type="password" class="form-control" id="confirmarContrasenia">
+                                      </div>
+                                    <div class="col-6">
+                                      <label for="inputAddress" class="form-label">Dirección Parqueadero</label>
+                                      <input type="text" class="form-control" id="inputAddress" placeholder="">
+                                    </div>
+                                    <div class="col-6">
+                                      <label for="inputAddress2" class="form-label">Otras indicaciones</label>
+                                      <input type="text" class="form-control" id="inputAddress2" placeholder="Ej. Diagonal al CC">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="inputState" class="form-label">Departamento</label>
+                                        <select id="inputState" class="form-select">
+                                          <option selected>Seleccionar...</option>
+                                          <option>...</option>
+                                        </select>
+                                      </div>
+                                    <div class="col-md-6">
+                                      <label for="inputCity" class="form-label">Ciudad</label>
+                                      <select id="inputCity" class="form-select">
+                                        <option selected>Seleccionar...</option>
+                                        <option>...</option>
+                                      </select>
+                                    </div>
+
+                                    <div class="col-6">
+                                        <label for="celdasCarro" class="form-label">Celdas Carro</label>
+                                        <input type="number" class="form-control" id="celdasCarro" placeholder="Total celdas disponibles">
+                                      </div>
+                                      <div class="col-6">
+                                        <label for="celdasMoto" class="form-label">Celdas Moto</label>
+                                        <input type="number" class="form-control" id="celdasMoto" placeholder="Total celdas disponibles">
+                                      </div>
+                                    
+                                    <div class="col-md-6">
+                                        <label class="form-label" for="horario">Horario Parqueadero</label>
+                                        <select class="form-select" id="horario">
+                                          <option selected>Seleccionar...</option>
+                                          <option value="">24 horas</option>
+                                      <option value="">8:00 AM - 5:00 PM</option>
+                                      <option value="">5:00 AM - 10:00 PM</option>
+                                        </select>
+                                      </div>
+                                   
+								   
+								   <div class="col-12 d-flex justify-content-end">
+                                      <button type="submit" class="btn btn-primary text-dark rounded-pill ">Guardar</button>
+                                    </div>
+                                  </form>
+								   
+                                    </div>
+                                    
+
+                           
+            
                         </div>
                         <div class="tab-pane fade p-3" id="nav-config_user" role="tabpanel" aria-labelledby="nav-config_user-tab">
                             <div class="h-350 p-2 overflow-auto">
@@ -209,7 +284,7 @@
                                     <input type="email" class="form-control" id="registrarCorreo">
                                 </div>
                                 <div class="col-md-6 mb-3">
-                                    <label for="registrarContrasena" class="form-label">Password</label>
+                                    <label for="registrarContrasena" class="form-label">Contraseña</label>
                                     <input type="password" class="form-control" id="registrarContrasena">
                                 </div>
                                 <div class="col-md-6 mb-3">
