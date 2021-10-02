@@ -24,7 +24,7 @@ import IniciarSesion from '@/components/IniciarSesion.vue'
 import NavbarInicio from '@/components/NavbarInicio.vue'
 import PiePagina from '@/components/PiePagina.vue'
 import RegistroInicio from '@/components/RegistroInicio.vue'
-import SeccionArticulo from '../components/SeccionArticulo.vue'
+import SeccionArticulo from '@/components/SeccionArticulo.vue'
 
 export default {
   name:"Nosotros",

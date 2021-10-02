@@ -13,9 +13,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#" class="btn btn-primary bg-primary text-white rounded-pill mb-3 nav-link align-middle" role="button"
-                      data-bs-toggle="modal"
-                      data-bs-target="#registroModal">
+                    <a href="#" class="btn btn-primary bg-primary text-white rounded-pill mb-3 nav-link align-middle" role="button" data-bs-toggle="modal" data-bs-target="#registroModal">
                         <span>Registrame</span>
                     </a>
                 </li>

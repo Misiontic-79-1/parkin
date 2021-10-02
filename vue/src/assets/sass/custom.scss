@@ -191,6 +191,10 @@ input[type=text]::placeholder {
 	height: 320px;
 }
 
+.h-130{
+  height: 130px;
+}
+
 .btn-primary:hover {
     color: #fff !important;
 	background-color: #003EA8 !important;
@@ -236,4 +240,4 @@ h3 {
 }
 
 
-@import "../../node_modules/bootstrap/scss/bootstrap";
+@import "../../../node_modules/bootstrap/scss/bootstrap.scss";

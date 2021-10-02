@@ -206,6 +206,10 @@ input[type=text]::placeholder {
   height: 320px;
 }
 
+.h-130 {
+  height: 130px;
+}
+
 .btn-primary:hover {
   color: #fff !important;
   background-color: #003EA8 !important;
