@@ -1,7 +1,7 @@
 <template>
   <div>
-    <nav class="margen-left navbar navbar-custom border-top border-5 border-secondary bg-white navbar-expand-lg navbar-light position-fixed w-85">
-        <div v-if="msg == 'Inicio'" class="container-fluid fw-bold">
+    <nav v-if="msg == 'Inicio'" class="margen-left navbar navbar-custom border-top border-5 border-secondary bg-white navbar-expand-lg navbar-light position-fixed w-85">
+        <div class="container-fluid fw-bold">
             <ul class="navbar-nav p-2">
                 <li class="nav-item">
                     <span class="nav-link"><img src="./../assets/img/icono-parqueadero.png" /> Parqueaderos disponibles</span>
@@ -18,8 +18,9 @@
                   class="fas fa-search"></i></button>
             </form>
         </div>
-
-        <div v-if="msg == 'Nosotros'" class="container-fluid fw-bold">
+    </nav>
+    <nav v-if="msg == 'Nosotros'" class="margen-left navbar navbar-custom border-top border-5 border-secondary bg-white navbar-expand-lg navbar-light position-fixed w-85">
+        <div class="container-fluid fw-bold">
             <ul class="navbar-nav p-2 d-flex align-items-center">
                 <li class="nav-item">
                   <span class="nav-link"> ¿Quienes somos? </span>
@@ -44,6 +45,12 @@
           <div class="d-flex align-items-end text-dark">
               <span> Nombre de Usuario <i class="fas fa-user-cog"></i></span>
           </div>
+        </div>
+    </nav>
+    <nav v-if="msg=='Config'">
+        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+        <button class="nav-link active" id="nav-config_par-tab" data-bs-toggle="tab" data-bs-target="#nav-config_par" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Configuracion de parqueadero</button>
+        <button class="nav-link" id="nav-config_user-tab" data-bs-toggle="tab" data-bs-target="#nav-config_user" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Configuracion de usuario</button>
         </div>
     </nav>
   </div>

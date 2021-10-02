@@ -3,6 +3,7 @@ import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
 import Nosotros from "../views/Nosotros.vue"
 import Dashboard from "../views/Dashboard.vue"
+import Config from "../views/Config.vue"
 Vue.use(VueRouter);
 
 const routes = [
@@ -20,6 +21,11 @@ const routes = [
     path: "/Dashboard",
     name: "Dashboard",
     component: Dashboard,
+  },
+  {
+    path: "/Config",
+    name: "Config",
+    component: Config,
   },
 ];
 

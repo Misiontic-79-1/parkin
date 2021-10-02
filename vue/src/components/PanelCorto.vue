@@ -1,8 +1,8 @@
 <template>
     <div class="item-panel mx-3 flex-grow-1 text-center rounded-20">
         <div v-if="msg == 'Date'" class="bg-white rounded-20 p-3 h-130 justify-content-center d-flex flex-column">
-            <div>Miércoles 11 de septiembre</div>
-            <div class="fuente-reloj" id="reloj">14:03</div>
+            <div id="fecha"></div>
+            <div class="fuente-reloj" id="reloj"></div>
         </div>
         <div v-if="msg == 'Carro'" class="bg-success text-white rounded-20 p-3 h-130 justify-content-center d-flex flex-column">
             <div>Celdas disponibles Carro</div>
@@ -41,10 +41,92 @@ function actual() {
     var mireloj = hora+" : "+minuto+" : "+segundo;
     return mireloj;
 }
+function actual2(){
+  var fecha= new Date();
+  var sem=fecha.getDay();
+  var dia=fecha.getDate();
+  var mes= fecha.getUTCMonth();
+  var año= fecha.getFullYear();
+  switch (sem) {
+    case 1:
+        sem="lunes"
+      break;
+    case 2:
+        sem="Martes"
+      break;
+    case 3:
+        sem="Miercoles"
+      break;
+    case 4:
+        sem="Jueves"
+      break;
+    case 5:
+        sem="Viernes"
+      break;
+    case 6:
+        sem="Sabado"
+      break;
+    case 7:
+        sem="Domingo"
+      break;
+
+    default:
+      break;
+  }
+  if (dia<10) { //dos cifras para la hora
+  dia="0"+dia;
+  }
+  switch (mes) {
+    case 0:
+        mes="enero"
+      break;
+    case 1:
+        mes="febrero"
+      break;
+    case 2:
+        mes="marzo"
+      break;
+    case 3:
+        mes="abril"
+      break;
+    case 4:
+        mes="mayo"
+      break;
+    case 5:
+        mes="junio"
+      break;
+    case 6:
+        mes="julio"
+      break;
+    case 7:
+        mes="agosto"
+      break;
+    case 8:
+        mes="septiembre"
+      break;
+    case 9:
+        mes="octubre"
+      break;
+    case 10:
+        mes="nobiembre"
+      break;
+    case 11:
+        mes="diciembre"
+      break;
+
+    default:
+      break;
+  }
+  var mifecha= sem+", "+dia+" de "+mes+" de "+año
+  return mifecha
+}
 function actualizar() { //función del temporizador
     var mihora=actual(); //recoger hora actual
     var mireloj=document.getElementById("reloj"); //buscar elemento reloj
     mireloj.innerHTML=mihora; //incluir hora en elemento
+    var midate=actual2();
+    var mifecha=document.getElementById("fecha");
+    mifecha.innerHTML=midate;
 }
 setInterval(actualizar,1000); //iniciar temporizador
 

@@ -15,13 +15,19 @@
   </div>
 </template>
 <script>
-import AsideInicio from '../components/AsideInicio.vue'
-import NavbarInicio from '../components/NavbarInicio.vue'
-import PanelCorto from '../components/PanelCorto.vue'
-import PanelLargo from '../components/PanelLargo.vue'
-import PiePagina from '../components/PiePagina.vue'
+import AsideInicio from '@/components/AsideInicio.vue'
+import NavbarInicio from '@/components/NavbarInicio.vue'
+import PanelCorto from '@/components/PanelCorto.vue'
+import PanelLargo from '@/components/PanelLargo.vue'
+import PiePagina from '@/components/PiePagina.vue'
 export default {
-  components: { AsideInicio, NavbarInicio, PiePagina, PanelCorto, PanelLargo },
-
-}
+  name:"Dashboard",
+  components: {
+    AsideInicio,
+    NavbarInicio,
+    PiePagina,
+    PanelCorto,
+    PanelLargo
+    },
+};
 </script>

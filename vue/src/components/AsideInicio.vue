@@ -29,7 +29,7 @@
             <hr class="bg-light opacity-100">
             <ul class="nav nav-pills flex-column align-items-center" id="menu">
               <li class="nav-item mb-3">
-                  <a href="#" class=" nav-link align-middle active" aria-current="page"
+                  <a href="/Dashboard" class=" nav-link align-middle active" aria-current="page"
                     >
                   <span>Tablero principal</span>
                   </a>
@@ -45,7 +45,7 @@
                   </a>
               </li>
               <li class="nav-item">
-                  <a href="configuracion.html" class="nav-link align-middle mb-3">
+                  <a href="/config" class="nav-link align-middle mb-3">
                   <span>Configuración</span>
                   </a>
               </li>
