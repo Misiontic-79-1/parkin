@@ -1,0 +1,272 @@
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="keywords" content="">
+        <meta name="description" content="">
+        <meta name="author" content="Lineer Rolong, Narayana Galvis">
+        <title>Yo Parqueo</title>
+        <link rel="icon" href="assets/svg/Icon.svg" type="image/svg">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Anton&family=Roboto+Condensed:wght@400;700&display=swap"
+            rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+        <link rel="stylesheet" type='text/css' href="./assets/sass/custom.css">
+        <script src='node_modules/bootstrap/js/dist/base-component.js'></script>
+    </head>
+    <body class="bg-dark">
+        <script>
+            function actual() {
+                fecha=new Date(); //Actualizar fecha.
+                hora=fecha.getHours(); //hora actual
+                minuto=fecha.getMinutes(); //minuto actual
+                segundo=fecha.getSeconds(); //segundo actual
+                if (hora<10) { //dos cifras para la hora
+                hora="0"+hora;
+                }
+                if (minuto<10) { //dos cifras para el minuto
+                minuto="0"+minuto;
+                }
+                if (segundo<10) { //dos cifras para el segundo
+                segundo="0"+segundo;
+                }
+                //ver en el recuadro del reloj:
+                mireloj = hora+" : "+minuto+" : "+segundo;	
+                return mireloj; 
+            }
+            function actualizar() { //función del temporizador
+                mihora=actual(); //recoger hora actual
+                mireloj=document.getElementById("reloj"); //buscar elemento reloj
+                mireloj.innerHTML=mihora; //incluir hora en elemento
+            }
+            setInterval(actualizar,1000); //iniciar temporizador
+        </script>
+        <div class="container-fluid">
+            <div class="row flex-nowrap">
+                <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 text-dark bg-white position-fixed w-15">
+                    <div class="d-flex flex-column justify-content-center align-items-center pt-2 text-white min-vh-100 d-none d-sm-block">
+                        <a href="/" class="text-secondary nav-link d-flex justify-content-center" aria-current="page">
+                            <img class=" p-2 w-80" src="assets/svg/logo-app.svg" />
+                        </a>
+                        <hr class="bg-light opacity-100">
+                        <ul class="nav nav-pills flex-column align-items-center" id="menu">
+                            <li class="nav-item mb-3">
+                                <a href="dashboard.html" class=" nav-link align-middle active" aria-current="page"
+                                    >
+                                    <span>Tablero principal</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link align-middle mb-3">
+                                    <span>Reservas</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link align-middle mb-3">
+                                    <span>Estadísticas</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="configuracion.html" class="nav-link align-middle mb-3">
+                                    <span>Configuración</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="text-danger nav-link align-middle mb-3">
+                                    <span>Salir</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col p-0 margen-left">
+                    <nav class="navbar navbar-custom bg-secondary navbar-expand-lg navbar-dark position-fixed w-85">
+                        <div class="container-fluid fw-bold">
+                            <ul class="navbar-nav p-2">
+                                <li class="nav-item">
+                                    <span class="nav-link text-white">
+                                        <img src="assets/img/icono-parqueadero.png" /> Nombre Parqueadero
+                                    </span>
+                                </li>
+                            </ul>
+                            <div class="d-flex align-items-end text-dark">
+                                <span> Nombre de Usuario <i class="fas fa-user-cog"></i></span>
+                            </div>
+                        </div>
+                    </nav>
+                    <div class="d-flex flex-wrap px-4 py-5 mt-100">
+                        <div class="item-panel d-flex mx-3 flex-column flex-grow-1 p-3 justify-content-center rounded-20 bg-white text-center">
+                            <div >Miércoles 11 de septiembre</div>
+                            <div class="fuente-reloj"  id="reloj"  >14:03</div>
+                        </div>            
+                        <div class="item-panel d-flex mx-3 flex-column flex-grow-1 p-3 justify-content-center rounded-20 bg-success text-white text-center">
+                            <div >PRECIO FRACCIÓN HORA</div>
+                            <div class="fuente-vehiculo"><i class="fas fa-warehouse"></i> $ 3.000</div>
+                        </div>
+                        <div class="item-panel d-flex mx-3 flex-column flex-grow-1 p-3 justify-content-center rounded-20 bg-info text-white text-center">
+                            <div>PICO Y PLACA HOY</div>
+                            <div class="fuente-vehiculo">0-9-1</div>
+                        </div>
+                        <div class="item-panel d-flex mx-3 flex-column flex-grow-1 p-3 justify-content-center rounded-20 bg-secondary text-white align-items-center">
+                            <div>CALENDARIO</div>
+                            <img class="w-25" src="./assets/img/calendario blanco.png" alt="">                             
+                        </div>
+                        <div class="contenedor-panel-largo bg-white rounded-20 mt-4 m-auto w-85" >
+                            <div class="pt-3 px-4">                    
+                                <button onclick="location.href='reserva_dia.html'" type="button" class="btn btn-primary text-white rounded-pill w-101">Dia</button>
+                                <button onclick="location.href='reserva_semana.html'" type="button" class="btn btn-primary text-white rounded-pill w-101">Semana</button>
+                            </div>      
+                            <DIV class="pt-1">                               
+                             <h2 class="text-center">LUNES</h2> 
+                            </DIV> 
+                            <div class="p-4"> 
+                                <scroll-container  class="pt-2 w-100">                   
+           <!--acordeon   -->
+                                <div class="panel-group " id="accordion" role="tablist">
+                                   <div class="panel panel-defaul"></div>
+                                   <div class="panel-heading" role="tab" id="heading1"></div>
+                                   <h2 class="panel-tittle bg-success">
+                                      <button class=" border accordion-button " type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
+                                        12:00:00
+                                      </button>
+                                    </h2>
+                                </div>
+                                <div id="collapse1" class="panel-collapse collapse in">
+                                <div class="panel-body ms-4 border">
+                                   <strong>PARQUEADERO N°: </strong>
+                                   <BR><strong>PLACA: </strong>
+                                   <BR><strong>TELEFONO:  </strong>
+                                   <BR><strong>NOMBRE: </strong>
+                                </div>
+                                </div>
+                             
+                                <div class="panel-group" id="accordion" role="tablist">
+                                   <div class="panel panel-defaul"></div>
+                                   <div class="panel-heading" role="tab" id="heading2"></div>
+                                   <h2 class="panel-tittle bg-danger">
+                                      <button class=" border accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="true" aria-controls="collapse2">
+                                        13:00:00
+                                      </button>
+                                    </h2>
+                                </div>
+                                <div id="collapse2" class="panel-collapse collapse in ">
+                                <div class="panel-body ms-4 border">
+                                   <strong>PARQUEADERO N°: P2</strong>
+                                   <BR><strong>PLACA: KJP86B</strong>
+                                   <BR><strong>TELEFONO: 3100000000 </strong>
+                                   <BR><strong>NOMBRE: CARLOS ANDRES </strong>
+                                </div>
+                                </div>
+                                <div class="panel-group" id="accordion" role="tablist">
+                                   <div class="panel panel-defaul"></div>
+                                   <div class="panel-heading" role="tab" id="heading3"></div>
+                                   <h2 class="panel-tittle bg-success">
+                                      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="true" aria-controls="collapse3">
+                                       14:00:00
+                                      </button>
+                                    </h2>
+                                </div>
+                                <div id="collapse3" class="panel-collapse collapse in">
+                                <div class="panel-body ms-4 border">
+                                   <strong>PARQUEADERO N°: </strong>
+                                   <BR><strong>PLACA: </strong>
+                                   <BR><strong>TELEFONO:  </strong>
+                                   <BR><strong>NOMBRE: </strong>
+                                </div>
+                                </div>
+                             
+                                <div class="panel-group" id="accordion" role="tablist">
+                                   <div class="panel panel-defaul"></div>
+                                   <div class="panel-heading" role="tab" id="heading4"></div>
+                                   <h2 class="panel-tittle bg-danger">
+                                      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="true" aria-controls="collapse4">
+                                        15:00:00
+                                      </button>
+                                    </h2>
+                                </div>
+                                <div id="collapse4" class="panel-collapse collapse in">
+                                <div class="panel-body ms-4 border">
+                                   <strong>PARQUEADERO N°: P2</strong>
+                                   <BR><strong>PLACA: KJP86B</strong>
+                                   <BR><strong>TELEFONO: 3100000000 </strong>
+                                   <BR><strong>NOMBRE: CARLOS ANDRES </strong>
+                                </div>
+                                </div>
+           
+                                <div class="panel-group " id="accordion" role="tablist">
+                                   <div class="panel panel-defaul"></div>
+                                   <div class="panel-heading" role="tab" id="heading5"></div>
+                                   <h2 class="panel-tittle bg-success">
+                                      <button class=" border accordion-button " type="button" data-bs-toggle="collapse" data-bs-target="#collapse5" aria-expanded="true" aria-controls="collapse5">
+                                        16:00:00
+                                      </button>
+                                    </h2>
+                                </div>
+                                <div id="collapse5" class="panel-collapse collapse in">
+                                <div class="panel-body ms-4 border">
+                                   <strong>PARQUEADERO N°: </strong>
+                                   <BR><strong>PLACA: </strong>
+                                   <BR><strong>TELEFONO:  </strong>
+                                   <BR><strong>NOMBRE: </strong>
+                                </div>
+                                </div>
+                             
+                                <div class="panel-group " id="accordion" role="tablist">
+                                   <div class="panel panel-defaul"></div>
+                                   <div class="panel-heading" role="tab" id="heading5"></div>
+                                   <h2 class="panel-tittle bg-success">
+                                      <button class=" border accordion-button " type="button" data-bs-toggle="collapse" data-bs-target="#collapse5" aria-expanded="true" aria-controls="collapse5">
+                                        16:00:00
+                                      </button>
+                                    </h2>
+                                </div>
+                                <div id="collapse5" class="panel-collapse collapse in">
+                                <div class="panel-body ms-4 border">
+                                   <strong>PARQUEADERO N°: </strong>
+                                   <BR><strong>PLACA: </strong>
+                                   <BR><strong>TELEFONO:  </strong>
+                                   <BR><strong>NOMBRE: </strong>
+                                </div>
+                                </div>
+                                <div class="panel-group " id="accordion" role="tablist">
+                                   <div class="panel panel-defaul"></div>
+                                   <div class="panel-heading" role="tab" id="heading5"></div>
+                                   <h2 class="panel-tittle bg-success">
+                                      <button class=" border accordion-button " type="button" data-bs-toggle="collapse" data-bs-target="#collapse5" aria-expanded="true" aria-controls="collapse5">
+                                        16:00:00
+                                      </button>
+                                    </h2>
+                                </div>
+                                <div id="collapse5" class="panel-collapse collapse ">
+                                <div class="panel-body ms-4 border">
+                                   <strong>PARQUEADERO N°: </strong>
+                                   <BR><strong>PLACA: </strong>
+                                   <BR><strong>TELEFONO:  </strong>
+                                   <BR><strong>NOMBRE: </strong>
+                                </div>
+                                </div>          
+                               
+                                
+                                
+                             </scroll-container>
+                                
+                                </div>
+                        </div>
+                    </div>
+                    <footer class="footer bg-secondary text-white w-100 py-2">
+                        <span>© 2021 YoParqueo - todos los derechos reservados</span>
+                    </footer>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</html>
+
+
+    

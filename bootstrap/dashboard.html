@@ -9,7 +9,7 @@
       <meta name="keywords" content="">
       <meta name="description" content="">
       <meta name="author" content="Lineer Rolong, Narayana Galvis">
-      <title>Yo Parqueo Dashboard</title>
+      <title>Yo Parqueo</title>
       <link rel="icon" href="assets/svg/Icon.svg" type="image/svg">
       <link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,26 +18,34 @@
       <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
       <link rel="stylesheet" type='text/css' href="./assets/sass/custom.css">
       <script src='node_modules/bootstrap/js/dist/base-component.js'></script>
-      <script>
-         window.addEventListener('load', function() {
-            document.getElementById ('ingresarVehiculo').onclick = function () {
-                  let valorPlaca = document.getElementById ('consultar-placa').value
-                  var ingresarPlaca = ''
-                  ingresarPlaca = valorPlaca
-                  document.getElementById ('placaVehiculo').innerHTML = ingresarPlaca
-              };
-             
-               
-       
-      
-          
-})
-              
-function carroOcupao() {
-         document.getElementById('item-carro').className = 'item-carro imagen_carro_disponible' .replace = 'item-carro imagen_carro_ocupado';}
-         </script>
    </head>
    <body class="bg-dark">
+      <script>
+         function actual() {
+             var fecha=new Date(); //Actualizar fecha.
+             var hora=fecha.getHours(); //hora actual
+             var minuto=fecha.getMinutes(); //minuto actual
+             var segundo=fecha.getSeconds(); //segundo actual
+             if (hora<10) { //dos cifras para la hora
+             hora="0"+hora;
+             }
+             if (minuto<10) { //dos cifras para el minuto
+             minuto="0"+minuto;
+             }
+             if (segundo<10) { //dos cifras para el segundo
+             segundo="0"+segundo;
+             }
+             //ver en el recuadro del reloj:
+             var mireloj = hora+" : "+minuto+" : "+segundo;	
+             return mireloj; 
+         }
+         function actualizar() { //función del temporizador
+            var mihora=actual(); //recoger hora actual
+            var mireloj=document.getElementById("reloj"); //buscar elemento reloj
+             mireloj.innerHTML=mihora; //incluir hora en elemento
+         }
+         setInterval(actualizar,1000); //iniciar temporizador
+     </script>
       <div class="container-fluid">
       <div class="row flex-nowrap">
          <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 text-dark bg-white position-fixed w-15">
@@ -95,7 +103,7 @@ function carroOcupao() {
             <div class="d-flex flex-wrap px-4 py-5 mt-100">
                <div class="item-panel d-flex mx-3 flex-column flex-grow-1 p-3 justify-content-center rounded-20 bg-white text-center">
                   <div>Miércoles 11 de septiembre</div>
-                  <div class="fuente-reloj">14:03</div>
+                  <div class="fuente-reloj" id="reloj">14:03</div>
                </div>
                <div class="item-panel d-flex mx-3 flex-column flex-grow-1 p-3 justify-content-center rounded-20 bg-success text-white text-center">
                   <div>Celdas disponibles Carro</div>
@@ -106,10 +114,9 @@ function carroOcupao() {
                   <div class="fuente-vehiculo"><i class="fas fa-motorcycle"></i>9/15</div>
                </div>
                <div class="item-panel d-flex mx-3 flex-column flex-grow-1 p-3 justify-content-center rounded-20 bg-warning text-center" id="placa">
-                  <div class="ingresar-placa"><input type="text" id="consultar-placa" name="consultar-placa" required
-                     minlength="" maxlength="" size="" placeholder="Placa"></div>
+                  <div class="ingresar-placa"><input type="text" id="consultar-placa" name="consultar-placa" required minlength="" maxlength="" size="" placeholder="Placa"></div>
                   <div><a href="#"><input class="btn btn-primary text-dark rounded-pill" id="Registrarme" type="button"
-                     value="Ingresar" data-bs-toggle="modal" data-bs-target="#iniciarSesionModal"></a></div>
+                     value="Ingresar" data-bs-toggle="modal" data-bs-target="#ingresarModal"></a></div>
                </div>
                <div class="contenedor-panel-largo bg-white rounded-20 mt-4">
                   <div class="d-flex justify-content-end m-2">
@@ -136,7 +143,7 @@ function carroOcupao() {
                         <span class="id_parqueadero">5</span>
                      </div>
                      <div class="d-flex wh-100 align-items-center justify-content-center m-3 imagen_carro_ocupado">
-                        <span class="id_parqueadero">6</span>
+                        <span class="id_parqueadero"><a class="text-white text-decoration-none" href="consultahora.html">6</a> </span>
                      </div>
                      <div class="d-flex wh-100 align-items-center justify-content-center m-3 imagen_carro_ocupado">
                         <span class="id_parqueadero">7</span>
@@ -174,7 +181,7 @@ function carroOcupao() {
          </div>
       </div>
       <!-- Modal iniciar ingresar vihiculo -->
-      <div class="modal fade" id="iniciarSesionModal" tabindex="-1" aria-labelledby="iniciarSesionModalLabel"
+      <div class="modal fade" id="ingresarModal" tabindex="-1" aria-labelledby="ingresarModalLabel"
          aria-hidden="true">
          <div class="modal-dialog">
             <div class="modal-content p-3">
@@ -269,7 +276,6 @@ function carroOcupao() {
          </div>
       </div>
    </body>
-  
    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
 </html>
 

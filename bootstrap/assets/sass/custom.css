@@ -136,14 +136,14 @@ input[type=text]::placeholder {
 }
 
 .fuente-reloj {
-  font-size: 60px;
+  font-size: 40px;
   width: 100%;
   font-family: 'Anton', sans-serif;
   text-align: center;
 }
 
 .fuente-vehiculo {
-  font-size: 60px;
+  font-size: 40px;
   width: 100%;
   font-family: 'Anton', sans-serif;
   text-align: center;
@@ -183,6 +183,10 @@ input[type=text]::placeholder {
 
 .rounded-4 {
   border-radius: 15px;
+}
+
+.w-101 {
+  width: 100px;
 }
 
 .wh-100 {
@@ -248,7 +252,6 @@ h3,
 .footer {
   text-align: center;
   padding: 20px;
-  margin: 0 !important;
   position: fixed;
   bottom: 0;
 }
