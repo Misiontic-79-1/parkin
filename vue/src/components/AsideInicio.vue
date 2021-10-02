@@ -47,9 +47,9 @@
                   </a>
               </li>
               <li class="nav-item">
-                  <a href="configuracion.html" class="nav-link align-middle mb-3">
+                  <router-link to="/configuracion" class="nav-link align-middle mb-3">
                   <span>Configuración</span>
-                  </a>
+                  </router-link>
               </li>
               <li class="nav-item">
                   <a href="/" class="text-danger nav-link align-middle mb-3">
