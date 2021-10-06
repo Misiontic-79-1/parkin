@@ -45,9 +45,13 @@
                   </a>
               </li>
               <li class="nav-item">
+<<<<<<< HEAD
                   <a href="/config" class="nav-link align-middle mb-3">
+=======
+                  <router-link to="/configuracion" class="nav-link align-middle mb-3">
+>>>>>>> Nara
                   <span>Configuración</span>
-                  </a>
+                  </router-link>
               </li>
               <li class="nav-item">
                   <a href="/" class="text-danger nav-link align-middle mb-3">

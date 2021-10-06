@@ -1,5 +1,6 @@
 .DS_Store
 node_modules
+VUE/node_modules
 /dist
 
 
