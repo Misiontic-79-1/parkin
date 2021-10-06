@@ -18,44 +18,6 @@
       <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
       <link rel="stylesheet" type='text/css' href="./assets/sass/custom.css">
       <script src='node_modules/bootstrap/js/dist/base-component.js'></script>
-<<<<<<< HEAD
-=======
-      <script>
-         window.addEventListener('load', function() {
-            document.getElementById ('ingresarVehiculo').onclick = function () {
-                  let valorPlaca = document.getElementById ('consultar-placa').value
-                  var ingresarPlaca = ''
-                  ingresarPlaca = valorPlaca
-                  document.getElementById ('placaVehiculo').innerHTML = ingresarPlaca
-
-                
-              
-              }
-
-
-            });          
-             
-            
-              
-
-
-              
-             
-            function btnFacturar() {
-               let valorPlaca = document.getElementById ('consultar-placa').value
-               var ingresarPlaca = ''
-               ingresarPlaca = valorPlaca
-               document.getElementById ('facturarPlacaVehiculo').innerHTML = ingresarPlaca
-      }
-       
-  
-          
-
-              
-function carroOcupao() {
-         document.getElementById('item-carro').className = 'item-carro imagen_carro_disponible' .replace = 'item-carro imagen_carro_ocupado';}
-         </script>
->>>>>>> Nara
    </head>
    <body class="bg-dark">
       <script>
@@ -152,20 +114,14 @@ function carroOcupao() {
                   <div class="fuente-vehiculo"><i class="fas fa-motorcycle"></i>9/15</div>
                </div>
                <div class="item-panel d-flex mx-3 flex-column flex-grow-1 p-3 justify-content-center rounded-20 bg-warning text-center" id="placa">
-<<<<<<< HEAD
                   <div class="ingresar-placa"><input type="text" id="consultar-placa" name="consultar-placa" required minlength="" maxlength="" size="" placeholder="Placa"></div>
-                  <div><a href="#"><input class="btn btn-primary text-dark rounded-pill" id="Registrarme" type="button"
-                     value="Ingresar" data-bs-toggle="modal" data-bs-target="#ingresarModal"></a></div>
-=======
-                  <div class="ingresar-placa"><input type="text" id="consultar-placa" name="consultar-placa" required
-                     minlength="" maxlength="" size="" placeholder="Placa"></div>
-                     <form></form>
-                        <div><input class="btn btn-primary text-dark rounded-pill" id="ingresarVehiculo" type="button"
-                           value="Ingresar" data-bs-toggle="modal" data-bs-target="#ingresarVehiculoModal">
-                            <input onclick="btnFacturar()" class="btn btn-secondary text-dark rounded-pill" id="factura" type="button"
-                           value="Facturar" data-bs-toggle="modal" data-bs-target="#facturaModal"></div>
-                        </form>
->>>>>>> Nara
+                     <form>
+                        <div>
+                           <input class="btn btn-primary text-dark rounded-pill" id="ingresarVehiculo" type="button" value="Ingresar" data-bs-toggle="modal" data-bs-target="#ingresarVehiculoModal">
+                           <input class="btn btn-secondary text-dark rounded-pill" id="factura" type="button"
+                            value="Facturar" data-bs-toggle="modal" data-bs-target="#facturaModal">
+                        </div>
+                     </form>
                </div>
                <div class="contenedor-panel-largo bg-white rounded-20 mt-4">
                   <div class="d-flex justify-content-end m-2">
@@ -230,11 +186,7 @@ function carroOcupao() {
          </div>
       </div>
       <!-- Modal iniciar ingresar vihiculo -->
-<<<<<<< HEAD
-      <div class="modal fade" id="ingresarModal" tabindex="-1" aria-labelledby="ingresarModalLabel"
-=======
       <div class="modal fade" id="ingresarVehiculoModal" tabindex="-1" aria-labelledby="ingresarVehiculoModalLabel"
->>>>>>> Nara
          aria-hidden="true">
          <div class="modal-dialog">
             <div class="modal-content p-3">
