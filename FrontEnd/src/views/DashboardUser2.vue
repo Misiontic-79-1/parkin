@@ -1,9 +1,9 @@
 <template>
-    <div class="DashboardUser2">
-      <aside-inicio msg="DbUser2"/>
-      <navbar-inicio msg="Dashboard"/>
-      <db-tabs msg="User2" class="margen-top col p-0 margen-left"/>
-      <pie-pagina/>
+  <div class="DashboardUser2">
+    <aside-inicio msg="DbUser2"/>
+    <navbar-inicio msg="Dashboard"/>
+    <db-tabs msg="User2" class="margen-top col p-0 margen-left"/>
+    <pie-pagina/>
   </div>
 </template>
 

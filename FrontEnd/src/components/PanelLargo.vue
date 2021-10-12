@@ -177,6 +177,38 @@
             </div>                    
         </div> 
     </div>
+    <div v-if="nom=='PlargoReservas'" class="contenedor-panel-largo bg-white rounded-20 mt-4 ">
+      <div class="d-flex flex-column align-items-center">
+          <h1 >Reservas</h1>
+          <scroll-container class="pt-0 w-85 h-350 overflow-auto">
+            <div class="d-flex justify-content-center fs-4">
+              <table class="table table table-hover m-0 text-center table-bordered border-secondary">
+                <thead>
+                  <tr>
+                    <th scope="col">Id_cliente</th>
+                    <th scope="col">Placa_Vehiculo</th>
+                    <th scope="col">Contacto</th>
+                    <th scope="col">Fecha_Hora</th>
+                    <th scope="col">Accion</th>
+                  </tr>
+                </thead>
+
+                <tbody>
+                  <tr v-for="(item, index) in notas" :key="index">
+                    <th scope="row">{{ item.usuarioId }}</th>
+                    <td>{{ item.nombre }}</td>
+                    <td>{{ item.descripcion }}</td>
+                    <td>{{ item.date }}</td>
+                    <td>
+                      <button type="submit" class="btn btn-primary bg-primary text-white rounded-pill" data-bs-toggle="modal" data-bs-target="#Eliminar">Eliminar</button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </scroll-container>
+        </div>
+      </div>
   </div>
 </template>
 

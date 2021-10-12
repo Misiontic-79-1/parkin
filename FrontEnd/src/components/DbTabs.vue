@@ -2,22 +2,28 @@
     <div>
         <div v-if="msg=='Dashboard'" class="tab-content" id="v-pills-tabContent">
             <div class="tab-pane fade active show" id="v-pills-TabPrincipal" role="tabpanel" aria-labelledby="v-pills-TabPrincipal-tab">
-                    <div class="d-flex flex-wrap px-4 py-5">
-                        <panel-corto msg="Date"/>
-                        <panel-corto msg="Carro"/>
-                        <panel-corto msg="Moto"/>
-                        <panel-corto msg="Placa"/>
-                        <panel-largo nom="Plargo" msg="Carro"/>
-                    </div>
+                <div class="d-flex flex-wrap px-4 py-5">
+                    <panel-corto msg="Date"/>
+                    <panel-corto msg="Carro"/>
+                    <panel-corto msg="Moto"/>
+                    <panel-corto msg="Placa"/>
+                    <panel-largo nom="Plargo" msg="Carro"/>
+                </div>
                 <db-facturar-modal/>
                 <db-ingresar-modal msg="Dashboard"/>
             </div>
             <div class="tab-pane fade" id="v-pills-Estadisticas" role="tabpanel" aria-labelledby="v-pills-Estadisticas-tab">
                 <p><strong>This is some placeholder content the Profile tab's associated content.</strong> Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content visibility and styling. You can use it with tabs, pills, and any other <code>.nav</code>-powered navigation.</p>
-                <button><router-link to="/DashboardUser">DbUser</router-link></button>
             </div>
             <div class="tab-pane fade" id="v-pills-Reservas" role="tabpanel" aria-labelledby="v-pills-Reservas-tab">
-                <p><strong>This is some placeholder content the reservas tab's associated content.</strong> Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content visibility and styling. You can use it with tabs, pills, and any other <code>.nav</code>-powered navigation.</p>
+                <div class="d-flex flex-wrap px-4 py-5">
+                    <panel-corto msg="Date"/>
+                    <panel-corto msg="Carro"/>
+                    <panel-corto msg="Moto"/>
+                    <panel-corto msg="Calendario"/>
+                    <panel-largo nom="PlargoReservas"/>
+                    
+                </div>
             </div>
             <div class="tab-pane fade" id="v-pills-Config" role="tabpanel" aria-labelledby="v-pills-Config-tab">
                     <div class="d-flex justify-content-center">
@@ -26,9 +32,6 @@
                         <config-panel/>
                     </div>
                     </div>
-                <config-modal-editar/>
-                <config-modal-agregar/>
-                <config-modal-eliminar/>
             </div>
         </div>
         <div v-if="msg=='DbUser'" class="tab-content" id="v-pills-tabContent">
@@ -70,9 +73,6 @@
 </template>
 
 <script>
-import ConfigModalAgregar from './ConfigModalAgregar.vue'
-import ConfigModalEditar from './ConfigModalEditar.vue'
-import ConfigModalEliminar from './ConfigModalEliminar.vue'
 import ConfigPanel from './ConfigPanel.vue'
 import DbFacturarModal from './DbFacturarModal.vue'
 import DbIngresarModal from './DbIngresarModal.vue'
@@ -88,9 +88,6 @@ export default {
         DbIngresarModal,
         NavbarInicio,
         ConfigPanel,
-        ConfigModalEditar,
-        ConfigModalAgregar,
-        ConfigModalEliminar
         
     },
     props:{

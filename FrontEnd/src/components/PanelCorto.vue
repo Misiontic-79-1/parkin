@@ -1,8 +1,8 @@
 <template>
     <div class="item-panel mx-3 flex-grow-1 text-center rounded-20">
         <div v-if="msg == 'Date'" class="bg-white rounded-20 p-3 h-130 justify-content-center d-flex flex-column">
-            <div id="fecha"></div>
-            <div class="fuente-reloj" id="reloj"></div>
+            <div name="fecha">fecha</div>
+            <div class="fuente-reloj" name="reloj">hora</div>
         </div>
         <div v-if="msg == 'Carro'" class="bg-success text-white rounded-20 p-3 h-130 justify-content-center d-flex flex-column">
             <div>Celdas disponibles Carro</div>
@@ -41,6 +41,11 @@
                     <input class="btn btn-primary text-dark rounded-pill mx-1" id="ingresarVehiculo" type="button" value="Ingresar" data-bs-toggle="modal" data-bs-target="#ingresarVehiculoModal">
                 </div>
             </form>
+        </div>
+        <div v-if="msg == 'Calendario'" class="bg-warning rounded-20 p-3 h-130 justify-content-center d-flex flex-column" id="calendario">
+          <a href="#" class="fuente-vehiculo text-black rounded-pill mb-1 nav-link align-middle" role="button" data-bs-toggle="modal" data-bs-target="#registroModal3">
+            CALENDARIO
+          </a>
         </div>
     </div>
 </template>
@@ -146,11 +151,16 @@ function actual2(){
 }
 function actualizar() { //función del temporizador
     var mihora=actual(); //recoger hora actual
-    var mireloj=document.getElementById("reloj"); //buscar elemento reloj
-    mireloj.innerHTML=mihora; //incluir hora en elemento
+    var mireloj=document.getElementsByName("reloj"); //buscar elemento reloj
+    mireloj.forEach(element => {
+      element.innerHTML=mihora; //incluir hora en elemento
+    });
     var midate=actual2();
-    var mifecha=document.getElementById("fecha");
-    mifecha.innerHTML=midate;
+    var mifecha=document.getElementsByName("fecha");
+    mifecha.forEach(element => {
+      element.innerHTML=midate;
+    });
+    
 }
 setInterval(actualizar,1000); //iniciar temporizador
 
