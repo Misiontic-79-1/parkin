@@ -1,0 +1,344 @@
+
+
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="Lineer Rolong, Narayana Galvis">
+      <title>Yo Parqueo Dashboard</title>
+      <link rel="icon" href="assets/svg/Icon.svg" type="image/svg">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Anton&family=Roboto+Condensed:wght@400;700&display=swap"
+         rel="stylesheet">
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+      <link rel="stylesheet" type='text/css' href="./assets/css/reducido.css">
+      <link rel="stylesheet" type='text/css' href="./assets/css/custom.css">
+      <script src='node_modules/bootstrap/js/dist/base-component.js'></script>
+      <script>
+         window.addEventListener('load', function() {
+            document.getElementById ('ingresarVehiculo').onclick = function () {
+                  let valorPlaca = document.getElementById ('consultar-placa').value
+                  var ingresarPlaca = ''
+                  ingresarPlaca = valorPlaca
+                  document.getElementById ('placaVehiculo').innerHTML = ingresarPlaca
+
+                
+              
+              }
+
+
+            });          
+             
+            
+              
+
+
+              
+             
+            function btnFacturar() {
+               let valorPlaca = document.getElementById ('consultar-placa').value
+               var ingresarPlaca = ''
+               ingresarPlaca = valorPlaca
+               document.getElementById ('facturarPlacaVehiculo').innerHTML = ingresarPlaca
+      }
+       
+  
+          
+
+              
+function carroOcupao() {
+         document.getElementById('item-carro').className = 'item-carro imagen_carro_disponible' .replace = 'item-carro imagen_carro_ocupado';}
+         </script>
+   </head>
+   <body class="bg-dark">
+      <div class="container-fluid">
+      <div class="row flex-nowrap">
+         <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 text-dark bg-white position-fixed w-15">
+            <div
+               class="d-flex flex-column justify-content-center align-items-center pt-2 text-white min-vh-100 d-none d-sm-block">
+               <a href="/" class="text-secondary nav-link d-flex justify-content-center" aria-current="page">
+               <img class=" p-2 w-80" src="assets/svg/logo-app.svg" />
+               </a>
+               <hr class="bg-light opacity-100">
+               <ul class="nav nav-pills flex-column align-items-center" id="menu">
+                  <li class="nav-item mb-3">
+                     <a href="#" class=" text-secondary nav-link align-middle active" aria-current="page"
+                        >
+                     <span>Tablero principal</span>
+                     </a>
+                  </li>
+                  <li class="nav-item">
+                     <a href="#" class="text-secondary nav-link align-middle mb-3">
+                     <span>Reservas</span>
+                     </a>
+                  </li>
+                  <li class="nav-item">
+                     <a href="#" class="text-secondary nav-link align-middle mb-3">
+                     <span>Estadísticas</span>
+                     </a>
+                  </li>
+                  <li class="nav-item">
+                     <a href="#" class="text-secondary nav-link align-middle mb-3">
+                     <span>Reservas</span>
+                     </a>
+                  </li>
+                  <li class="nav-item">
+                     <a href="#" class="text-secondary nav-link align-middle mb-3">
+                     <span>Configuración</span>
+                     </a>
+                  </li>
+                  <li class="nav-item">
+                     <a href="#" class="text-secondary nav-link align-middle mb-3">
+                     <span>Salir</span>
+                     </a>
+                  </li>
+               </ul>
+            </div>
+         </div>
+         <div class="col p-0 margen-left">
+            <nav
+               class="navbar navbar-custom border-top border-5 border-secondary bg-secondary navbar-expand-lg navbar-dark position-fixed w-85">
+               <div class="container-fluid fw-bold">
+                  <ul class="navbar-nav p-2">
+                     <li class="nav-item">
+                        <span class="nav-link"><img src="assets/img/icono-parqueadero.png" /> Nombre Parqueadero
+                        </span>
+                     </li>
+                  </ul>
+                  <div class="d-flex align-items-end text-dark">
+                     <span> Nombre de Usuario <i class="fas fa-user-cog"></i></span>
+                  </div>
+               </div>
+            </nav>
+            <div class="contenedor-items">
+               <div class="item-panel">
+                  <div>Miércoles 11 de septiembre</div>
+                  <div class="fuente-reloj">14:03</div>
+               </div>
+               <div class="item-panel fondo-carros">
+                  <div>Celdas disponibles Carro</div>
+                  <div class="fuente-vehiculo"><i class="fas fa-car"></i>9/15</div>
+               </div>
+               <div class="item-panel fondo-motos">
+                  <div>Celdas disponibles Moto</div>
+                  <div class="fuente-vehiculo"><i class="fas fa-motorcycle"></i>9/15</div>
+               </div>
+               
+               <div class="item-panel fondo-placa" id="placa">
+                  <form>
+                  <div class="ingresar-placa"><input  type="text" id="consultar-placa" name="consultar-placa" 
+                     minlength="" maxlength="" size="" placeholder="Placa"></div>
+                  <div><input class="btn btn-primary text-dark rounded-pill" id="ingresarVehiculo" type="button"
+                     value="Ingresar" data-bs-toggle="modal" data-bs-target="#ingresarVehiculoModal">
+                      <input onclick="btnFacturar()" class="btn btn-secondary text-dark rounded-pill" id="factura" type="button"
+                     value="Facturar" data-bs-toggle="modal" data-bs-target="#facturaModal"></div>
+                  </form>
+               </div>
+            
+               <div class="contenedor-panel-largo">
+                  <div class="contenedor-selector">
+                     <ul id="selector">
+                        <li>VER</li>
+                        <li><a type="button" class="activo"  onclick="document.getElementById('item-carro').remove() "><i class="fas fa-car"></i></a></li>
+                        <li><a type="button" class="activo"  onclick="this.innerHTML=Date()">Donde estoy?</li>
+                        <li><a type="button" class=""  onclick="carroOcupao()"><i class="fas fa-motorcycle"></a></i></li>
+                     </ul>
+                  </div>
+                
+                  <div class="item-panel-largo">
+                     <div class="bg-black container-fluid" id="contenedorJavaScript">
+                        
+                        <script>
+                           let ul = document.createElement("ul")
+                           ul.setAttribute("id","idUl");
+                           let li1 = document.createElement('li');
+                           li1.innerHTML = "texto LI1 <a href='https://www.google.com' target='blank'>ir a google</a>"
+                           let li2 = document.createElement('li');
+                           li2.innerHTML = "texto LI2"
+                           ul.innerHTML = li1.outerHTML;
+                           ul.appendChild(li2);
+                           let contenedor = document.getElementById("contenedorJavaScript");
+                           contenedor.appendChild(ul);
+                           alert.log("ya valimos")
+                        </script>
+                     </div>
+                     <div id="item-carro" class="item-carro imagen_carro_disponible">
+                        <span class="id_parqueadero">1</span>
+                     </div>
+                     <div class="item-carro imagen_carro_disponible">
+                        <span class="id_parqueadero">2</span>
+                     </div>
+                     <div class="item-carro imagen_carro_disponible">
+                        <span class="id_parqueadero">3</span>
+                     </div>
+                     <div class="item-carro imagen_carro_disponible">
+                        <span class="id_parqueadero">4</span>
+                     </div>
+                     <div class="item-carro imagen_carro_disponible">
+                        <span class="id_parqueadero">5</span>
+                     </div>
+                     <div class="item-carro imagen_carro_ocupado">
+                        <span class="id_parqueadero">6</span>
+                     </div>
+                     <div class="item-carro imagen_carro_ocupado">
+                        <span class="id_parqueadero">7</span>
+                     </div>
+                     <div class="item-carro imagen_carro_ocupado">
+                        <span class="id_parqueadero">8</span>
+                     </div>
+                     <div class="item-carro imagen_carro_ocupado">
+                        <span class="id_parqueadero">9</span>
+                     </div>
+                     <div class="item-carro imagen_carro_ocupado">
+                        <span class="id_parqueadero">10</span>
+                     </div>
+                     <div class="item-carro imagen_carro_ocupado">
+                        <span class="id_parqueadero">11</span>
+                     </div>
+                     <div class="item-carro imagen_carro_ocupado">
+                        <span class="id_parqueadero">12</span>
+                     </div>
+                     <div class="item-carro imagen_carro_ocupado">
+                        <span class="id_parqueadero">13</span>
+                     </div>
+                     <div class="item-carro imagen_carro_ocupado">
+                        <span class="id_parqueadero">14</span>
+                     </div>
+                     <div class="item-carro imagen_carro_ocupado">
+                        <span class="id_parqueadero">15</span>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <footer class="footer bg-secondary text-white w-100 py-2">
+               <span>© 2021 YoParqueo - todos los derechos reservados</span>
+            </footer>
+         </div>
+      </div>
+      <!-- Modal iniciar ingresar vihiculo -->
+      <div class="modal fade" id="ingresarVehiculoModal" tabindex="-1" aria-labelledby="ingresarVehiculoModalLabel"
+         aria-hidden="true">
+         <div class="modal-dialog">
+            <div class="modal-content p-3">
+               <div class="modal-header">
+                  <h3 class="text-primary">Ingresar Vehiculo</h3>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+               </div>
+               <form>
+                  <div class="modal-body">
+                     <div class="mb-3">
+                       
+                           <div class="row">
+                              <div class="col-md-12">
+                                 <span class="text-muted">Placa</span>
+                                 <h3 id="placaVehiculo"></h3>
+                                 <hr>
+                              </div>
+                              <div class="col-md-12">
+                                 <span class="text-muted">Precio hora/Fracción</span>
+                                 <h3>$4.000</h3>
+                                 <hr>
+                              </div>
+                              <div class="col-md-12">
+                                 <span class="text-muted">Hora de ingreso</span>
+                                 <h3>15:17</h3>
+                                
+                           </div>
+                        </div>
+                     
+                       
+                     </div>
+                  </div>
+                  <div class="modal-footer justify-content-center">
+                     <button type="button" class="btn"
+                        data-bs-dismiss="modal">Cancelar</button>
+                     <button type="submit" class="btn btn-primary bg-primary text-white rounded-pill">Ingresar</button>
+                  </div>
+               </form>
+            </div>
+         </div>
+      </div>
+      <!-- Modal factura -->
+      <div class="modal fade" id="facturaModal" tabindex="-1" aria-labelledby="facturaModalLabel" aria-hidden="true">
+         <div class="modal-dialog modal-md">
+            <div class="modal-content p-3">
+               <div class="modal-header">
+                  <h3 class="text-primary">Facturar</h3>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+               </div>
+               <form>
+                  <div class="modal-body">
+                     <div class="row">
+                        <div class="col-md-12 text-center mb-3">
+                          <p>Régimen simplificado<br>
+                          Nombre representante: Leo Parqueo <br>
+                          Nit: 900532084 <br>
+                          Dirección: cra89 #31-68 <br>
+                          Teléfono: 3006183669
+                        </div>
+                        <hr>
+
+                        <div class="row">
+                           <div class="col-md-12">
+                              <span class="text-muted">Placa</span>
+                              <h3 id="facturarPlacaVehiculo"></h3>
+                              <hr>
+                           </div>
+                           <div class="col-md-6">
+                              <span class="text-muted">Fecha de ingreso</span>
+                              <h3>24/09/2021</h3>
+                              <hr>   
+                        </div>   
+                        <div class="col-md-6">
+                           <span class="text-muted">Hora de ingreso</span>
+                           <h3>15:17</h3>
+                           <hr>
+                        </div>
+                        <div class="col-md-6">
+                           <span class="text-muted">Fecha de salida</span>
+                           <h3>24/09/2021</h3>
+                           <hr>   
+                     </div>
+
+                             
+                           <div class="col-md-6">
+                              <span class="text-muted">Hora de salida</span>
+                              <h3>16:17</h3>
+                              <hr>   
+                        </div>
+                        <div class="col-md-6">
+                           <span class="text-muted">Precio hora/Fracción</span>
+                           <h3>$4.000</h3>
+                           <hr>
+                        </div>
+                        <div class="col-md-6">
+                           <span class="text-muted">Tiempo Facturado</span>
+                           <h3>01:00 hora(s)</h3>
+                           <hr>
+                        </div>
+                        <div class="col-md-12">
+                           <span class="text-muted">Total</span>
+                           <h3>$4.000</h3>
+                           
+                        </div>
+                        
+                        <div class="modal-footer justify-content-center">
+                           <button type="button" class="btn"
+                        data-bs-dismiss="modal">Cancelar</button>
+                           <button type="submit" class="btn btn-primary bg-primary text-white rounded-pill" data-bs-dismiss="modal">Imprimir factura</button>
+                        </div>
+                       
+               </form>
+            </div>
+         </div>
+      </div>
+   </body>
+  
+   <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</html>
+
