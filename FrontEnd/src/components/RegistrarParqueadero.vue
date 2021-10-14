@@ -9,7 +9,7 @@
             class="form-control"
             id="nombre_usuario"
             placeholder="Nombre Usuario"
-            v-model="nombre_usuario" required
+            v-model="usuario" required
           />
         </div>
       </div>
@@ -22,7 +22,7 @@
             class="form-control"
             id="contrasenia"
             placeholder="Contraseña"
-            v-model="contrasenia" required
+            v-model="password" required
           />
         </div>
       </div>
@@ -99,6 +99,28 @@
         />
       </div>
 
+      <div class="col-4">
+        <label for="celdas_carro" class="form-label">Celdas totales carro</label>
+        <input
+          type="number"
+          class="form-control"
+          id="celdas_carro"
+          placeholder="No. celdas carros"
+          v-model="celdas_carro"
+        />
+      </div>
+
+      <div class="col-4">
+        <label for="celdas_moto" class="form-label">Celdas totales moto</label>
+        <input
+          type="number"
+          class="form-control"
+          id="celdas_moto"
+          placeholder="No. celdas motos"
+          v-model="celdas_moto"
+        />
+      </div>
+
       <div class="col-md-4">
         <label class="form-label" for="#horario">Horario Parqueadero</label>
         <select class="form-select" id="horario" v-model="horario">
@@ -134,23 +156,27 @@ export default {
 
 
   data: () => ({
-        nombre_usuario: "",
+        usuario: "",
         nombre_parqueadero: "",
-        contrasenia: "",
+        password: "",
         nit: "",
         celular: "",
         correo: "",
         direccion: "",
         ciudad: "",
+        celdas_carro: "",
+        celdas_moto: "",
         horario: "",
-        valorHoraFraccion: ""
+        valorHoraFraccion: "",
+        
   }),
 
 
     methods: {
     async registerparqueadero() {
         try {
-            await auth.registerparqueadero(this.nombre_usuario,this.nombre_parqueadero,this.contrasenia,this.nit,this.correo,this.celular,this.direccion,this.ciudad,this.horario,this.valorHoraFraccion);
+            await auth.registerparqueadero(this.usuario,this.nombre_parqueadero,this.password,this.nit,this.correo,this.celular,this.direccion,this.ciudad,this.celdas_carro,
+        this.celdas_moto,this.horario,this.valorHoraFraccion);
             this.$router.push("/gracias")
             
         } catch (error) {

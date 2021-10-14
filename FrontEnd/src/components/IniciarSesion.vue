@@ -67,12 +67,19 @@ export default {
             this.admins=res.data
             
             })
+
+            await auth.loginadmin(this.usuario, this.password)
+            .then(res=>{
+            this.admin=res.data
+            
+            })
+
             this.users.forEach(element => {
                 if (this.usuario===element.usuario) {
                    this.val=true;
                 }
             });
-            this.admins.forEach(element => {
+            this.admin.forEach(element => {
                 if (this.usuario===element.usuario) {
                    this.val2=true;
                 }
@@ -87,9 +94,10 @@ export default {
                     }
                 } 
             });
+            
             } else {
                 if (this.val2) {
-                    this.admins.forEach(element => {
+                    this.admin.forEach(element => {
                 if (this.usuario===element.usuario) {
                    if (this.password===element.password) {
                         this.$router.push("/Dashboard");
@@ -98,6 +106,7 @@ export default {
                     }
                 } 
             });
+            
                 } else {
                     this.error = true;
                 }
