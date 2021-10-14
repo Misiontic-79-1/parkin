@@ -182,7 +182,7 @@
           <h1 >Reservas</h1>
           <scroll-container class="pt-0 w-85 h-350 overflow-auto">
             <div class="d-flex justify-content-center fs-4">
-              <table class="table table table-hover m-0 text-center table-bordered border-secondary">
+              <table class="table table-hover m-0 text-center">
                 <thead>
                   <tr>
                     <th scope="col">Id_cliente</th>

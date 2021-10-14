@@ -42,9 +42,10 @@
                 </div>
             </form>
         </div>
-        <div v-if="msg == 'Calendario'" class="bg-warning rounded-20 p-3 h-130 justify-content-center d-flex flex-column" id="calendario">
-          <a href="#" class="fuente-vehiculo text-black rounded-pill mb-1 nav-link align-middle" role="button" data-bs-toggle="modal" data-bs-target="#registroModal3">
-            CALENDARIO
+        <div v-if="msg == 'Calendario'" class="bg-secondary rounded-20 p-3 h-130 justify-content-center d-flex flex-column" id="calendario">
+          <a href="#" class=" text-white rounded-pill nav-link align-middle" role="button" data-bs-toggle="modal" data-bs-target="#calendarioModal">
+            <div>CALENDARIO</div>
+            <div class="fuente-vehiculo"><i class="fas fa-calendar-alt"></i></div>
           </a>
         </div>
     </div>

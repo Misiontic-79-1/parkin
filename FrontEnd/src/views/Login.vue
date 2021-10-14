@@ -1,6 +1,6 @@
 <template>
-    <div class="IniciarSesion">
-        <div class="modal fade" id="iniciarSesionModal" tabindex="-1" aria-labelledby="iniciarSesionModalLabel" aria-hidden="true">
+    <div class="Login">
+        <div class="m-auto">
             <div class="modal-dialog">
                 <div class="modal-content p-3">
                     <div class="modal-header">
@@ -29,7 +29,7 @@
                                 <input type="checkbox" class="form-check-input" id="recordar">
                                 <label class="form-check-label" for="#recordar">Recordarme</label>
                             </div>
-                            <p v-if="error" class="">Has introducido mal el email o la contraseña.</p>
+                            <p v-if="error" class="text-danger">Has introducido mal el email o la contraseña.</p>
                         </div>
                         <div class="modal-footer justify-content-center">
                             <button type="button" class="btn border text-primary border-primary border-1 rounded-pill" data-bs-toggle="modal" data-bs-target="#registroModal">
@@ -46,11 +46,11 @@
 <script>
 import auth from "@/logica/auth"
 export default {
-  name:"IniciarSesion",
+  name:"Login",
   data: () => ({
     usuario: "",
     password: "",
-    error:false,
+    error:true,
     val:false,
     val2:false
   }),

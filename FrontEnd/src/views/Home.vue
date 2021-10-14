@@ -6,6 +6,7 @@
     <mapa-inicio/>
     <iniciar-sesion/>
     <registro-inicio/>
+    <reserva-parcial/>
   </div>
 </template>
 
@@ -17,6 +18,7 @@ import MapaInicio from '@/components/MapaInicio.vue';
 import NavbarInicio from '@/components/NavbarInicio.vue';
 import PiePagina from '@/components/PiePagina.vue';
 import RegistroInicio from '@/components/RegistroInicio.vue';
+import ReservaParcial from '../components/ReservaParcial.vue';
 
 export default {
   name: "Home",
@@ -27,6 +29,9 @@ export default {
     MapaInicio,
     IniciarSesion,
     RegistroInicio,
+    ReservaParcial,
   },
 };
 </script>
+
+    Reservar
