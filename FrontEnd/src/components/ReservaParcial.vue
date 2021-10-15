@@ -3,8 +3,9 @@
         <div class="modal fade" id="reservaParcial" tabindex="-1" aria-labelledby="reservaparcialModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-lg">
                 <div class="modal-content p-3">
-                    <div class="modal-header">
+                    <div class="modal-header d-flex flex-column">
                         <h3 class="text-primary">Haz tu reserva</h3>
+                        <p class="m-0">Reserva valida solo por 15 minutos</p>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <form action @submit.prevent="agregarReserva()">
@@ -35,6 +36,10 @@
                                 </div>
                                 <div class="col-md-6 mb-3">
                                     <label for="#reservarHoraF" class="form-label">Hora Fin de la reserva <p name="reloj1"></p></label>
+                                </div>
+                                <div>
+                                    <p class="text-primary">Recuerda llegar en 15 minutos habiles</p>
+                                    <p v-if="msg=='free'">Si desea reservar por mas tiempo por favor <a href="#" role="button" data-bs-toggle="modal" data-bs-target="#registroModal">Registrarse</a></p>
                                 </div>
                             </div>
                         </div>
@@ -153,6 +158,9 @@ function fechaHorai() { //función del temporizador
 setInterval(fechaHorai,1000); //iniciar temporizador
 export default {
   name:"RegistroInicio",
+  props:{
+      msg:String
+  },
   data() {
       return{
           reserva:{

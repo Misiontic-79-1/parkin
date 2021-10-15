@@ -46,9 +46,11 @@
                 <db-ingresar-modal msg="DbUser"/>
             </div>
             <div class="tab-pane fade" id="v-pills-Reservas" role="tabpanel" aria-labelledby="v-pills-Reservas-tab">
-                <reservar/>
-                <reserva-parcial/>
-                <reserva-total/>
+                <div class="d-flex flex-column px-4 py-5">
+                    <reservar/>
+                    <reserva-parcial/>
+                    <reserva-total/>
+                </div>
             </div>
             <div class="tab-pane fade" id="v-pills-Config" role="tabpanel" aria-labelledby="v-pills-Config-tab">
                     <p><strong>This is some placeholder content the Configuracion tab's associated content.</strong> Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content visibility and styling. You can use it with tabs, pills, and any other <code>.nav</code>-powered navigation.</p>

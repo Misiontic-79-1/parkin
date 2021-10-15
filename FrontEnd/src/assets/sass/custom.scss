@@ -183,6 +183,10 @@ $link-hover-color: $primary;
 	height: 520px;
 }
 
+.h-200{
+	height: 200px;
+}
+
 .h-400{
 	height: 400px;
 }
@@ -201,7 +205,18 @@ $link-hover-color: $primary;
     border: none;
 }
 
+.btn-info:hover {
+    color: #fff !important;
+	background-color: #003EA8 !important;
+    border: none;
+}
+
 .btn-outline-primary:hover {
+	background-color: #003EA8 !important;
+	border: 1px solid #003EA8 !important;
+}
+
+.btn-outline-info:hover {
 	background-color: #003EA8 !important;
 	border: 1px solid #003EA8 !important;
 }

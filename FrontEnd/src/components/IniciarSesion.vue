@@ -52,7 +52,8 @@ export default {
     password: "",
     error:false,
     val:false,
-    val2:false
+    val2:false,
+    val3:false
   }),
   methods: {
       async login(){
@@ -67,6 +68,11 @@ export default {
             this.admins=res.data
             
             })
+            await auth.loginadmin(this.usuario, this.password)
+            .then(res=>{
+            this.admin=res.data
+            
+            })
             this.users.forEach(element => {
                 if (this.usuario===element.usuario) {
                    this.val=true;
@@ -75,6 +81,11 @@ export default {
             this.admins.forEach(element => {
                 if (this.usuario===element.usuario) {
                    this.val2=true;
+                }
+            });
+            this.admin.forEach(element => {
+                if (this.usuario===element.usuario) {
+                   this.val3=true;
                 }
             });
             if (this.val) {
@@ -105,8 +116,25 @@ export default {
                 } 
             });
                 } else {
-                    this.error = true;
-                    this.$router.push("/login");
+                    if (this.val3) {
+                       this.admin.forEach(element => {
+                            if (this.usuario===element.usuario) {
+                                if (this.password===element.password) {
+                                    const userLogged=element.usuario
+                                    const idLogged=element._id 
+                                    auth.setIdLogged(idLogged)
+                                    auth.setUserLogged(userLogged)
+                                        this.$router.push("/Dashboard");
+                                    }else {
+                                        this.error = true;
+                                        this.$router.push("/login");
+                                    }
+                            } 
+                        }); 
+                    } else {
+                        this.error = true;
+                        this.$router.push("/login");                        
+                    }
                 }
                 
             }

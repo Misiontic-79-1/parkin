@@ -2,11 +2,21 @@
   <div class="home">
     <aside-inicio msg="Inicio"/>
     <navbar-inicio msg="Inicio"/>
+    <div class="d-flex justify-content-center p-4 margen-top margen-left w-85">
+      <div class="w-100 contenedor bg-white h-100">
+          <div class="col-md-12 my-5 mt-5 text-center">
+           <i class="fas fa-check fa-10x text-success"></i>
+      <h2>Se ha registrado con éxito</h2>
+      <p>Ahora puede iniciar seccion con su usuario y contraseña</p>
+      <router-link to="/">
+      <button type="button" class="btn btn-primary bg-primary text-white rounded-pill" >Volver al inicio</button></router-link>
+    </div>
+      </div>
+  </div>
     <pie-pagina/>
-    <mapa-inicio/>
+    
     <iniciar-sesion/>
     <registro-inicio/>
-    <reserva-parcial msg="free"/>
   </div>
 </template>
 
@@ -14,24 +24,18 @@
 // @ is an alias to /src
 import AsideInicio from '@/components/AsideInicio.vue';
 import IniciarSesion from '@/components/IniciarSesion.vue';
-import MapaInicio from '@/components/MapaInicio.vue';
 import NavbarInicio from '@/components/NavbarInicio.vue';
 import PiePagina from '@/components/PiePagina.vue';
 import RegistroInicio from '@/components/RegistroInicio.vue';
-import ReservaParcial from '../components/ReservaParcial.vue';
 
 export default {
-  name: "Home",
+  name: "Gracias",
   components: {
     AsideInicio,
     NavbarInicio,
     PiePagina,
-    MapaInicio,
     IniciarSesion,
     RegistroInicio,
-    ReservaParcial,
   },
 };
 </script>
-
-    Reservar

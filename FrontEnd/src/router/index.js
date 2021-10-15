@@ -6,6 +6,7 @@ import Dashboard from "../views/Dashboard.vue";
 import DashboardUser from "../views/DashboardUser.vue";
 import DashboardUser2 from "../views/DashboardUser2.vue";
 import Login from "../views/Login.vue"
+import Gracias from "../views/Gracias.vue"
 Vue.use(VueRouter);
 
 const routes = [
@@ -38,6 +39,11 @@ const routes = [
     path: "/login",
     name: "login",
     component: Login,
+  },
+  {
+    path: "/Gracias",
+    name: "Gracias",
+    component: Gracias,
   },
 ];
 
