@@ -17,6 +17,11 @@
                         <span>Registrame</span>
                     </a>
                 </li>
+                <li>
+                    <a href="#" class="btn btn-primary bg-primary text-white rounded-pill mb-3 nav-link align-middle" role="button" data-bs-toggle="modal" data-bs-target="#reservaParcial">
+                        <span>Reservar</span>
+                    </a>
+                </li>
                 <li class="nav-item">
                     <router-link to="/nosotros" class="nav-link align-middle mb-3">Nosotros</router-link>
                 </li>
@@ -29,10 +34,10 @@
             <hr class="bg-light opacity-100">
             <div class="nav nav-pills flex-column align-items-center" id="v-pills-tab" role="tablist" aria-orientation="vertical">
                 <button class="nav-item mb-3 align-middle nav-link active" id="v-pills-TabPrincipal-tab" data-bs-toggle="pill" data-bs-target="#v-pills-TabPrincipal" type="button" role="tab" aria-controls="v-pills-TabPrincipal" aria-selected="true">Tablero Principal</button>
-                <button class="nav-item mb-3 align-middle nav-link" id="v-pills-Estadisticas-tab" data-bs-toggle="pill" data-bs-target="#v-pills-Estadisticas" type="button" role="tab" aria-controls="v-pills-Estadisticas" aria-selected="false">Estadisticas</button>
+                <button class="nav-item mb-3 align-middle nav-link d-none" id="v-pills-Estadisticas-tab" data-bs-toggle="pill" data-bs-target="#v-pills-Estadisticas" type="button" role="tab" aria-controls="v-pills-Estadisticas" aria-selected="false">Estadisticas</button>
                 <button class="nav-item mb-3 align-middle nav-link" id="v-pills-Reservas-tab" data-bs-toggle="pill" data-bs-target="#v-pills-Reservas" type="button" role="tab" aria-controls="v-pills-Reservas" aria-selected="false">Reservas</button>
                 <button class="nav-item mb-3 align-middle nav-link" id="v-pills-Config-tab" data-bs-toggle="pill" data-bs-target="#v-pills-Config" type="button" role="tab" aria-controls="v-pills-Config" aria-selected="false">Configuracion</button>
-                <button class="nav-item mb-3 align-middle nav-link"><router-link to="/" class="nav-link align-middle mb-3">Salir</router-link></button>
+                <button @click="salir()" class="nav-item mb-3 align-middle nav-link"><router-link to="/" class="text-danger text-decoration-none align-middle mb-3">Salir</router-link></button>
             </div>
         </div>
         <div v-if="msg == 'DbUser'" class="d-flex flex-column justify-content-center align-items-center pt-2 text-white min-vh-100 d-none d-sm-block">
@@ -44,7 +49,7 @@
                 <button class="nav-item mb-3 align-middle nav-link active" id="v-pills-TabPrincipal-tab" data-bs-toggle="pill" data-bs-target="#v-pills-TabPrincipal" type="button" role="tab" aria-controls="v-pills-TabPrincipal" aria-selected="true">Tablero Principal</button>
                 <button class="nav-item mb-3 align-middle nav-link" id="v-pills-Reservas-tab" data-bs-toggle="pill" data-bs-target="#v-pills-Reservas" type="button" role="tab" aria-controls="v-pills-Reservas" aria-selected="false">Reservas</button>
                 <button class="nav-item mb-3 align-middle nav-link" id="v-pills-Config-tab" data-bs-toggle="pill" data-bs-target="#v-pills-Config" type="button" role="tab" aria-controls="v-pills-Config" aria-selected="false">Configuracion</button>
-                <button class="nav-item mb-3 align-middle nav-link"><router-link to="/" class="nav-link align-middle mb-3">Salir</router-link></button>
+                <button @click="salir()" class="nav-item mb-3 align-middle nav-link"><router-link to="/" class="text-danger text-decoration-none align-middle mb-3">Salir</router-link></button>
             </div>
         </div>
         <div v-if="msg == 'DbUser2'" class="d-flex flex-column justify-content-center align-items-center pt-2 text-white min-vh-100 d-none d-sm-block">
@@ -56,18 +61,24 @@
                 <button class="nav-item mb-3 align-middle nav-link active" id="v-pills-TabPrincipal-tab" data-bs-toggle="pill" data-bs-target="#v-pills-TabPrincipal" type="button" role="tab" aria-controls="v-pills-TabPrincipal" aria-selected="true">Tablero Principal</button>
                 <button class="nav-item mb-3 align-middle nav-link" id="v-pills-Reservas-tab" data-bs-toggle="pill" data-bs-target="#v-pills-Reservas" type="button" role="tab" aria-controls="v-pills-Reservas" aria-selected="false">Reservas</button>
                 <button class="nav-item mb-3 align-middle nav-link" id="v-pills-Config-tab" data-bs-toggle="pill" data-bs-target="#v-pills-Config" type="button" role="tab" aria-controls="v-pills-Config" aria-selected="false">Configuracion</button>
-                <button class="nav-item mb-3 align-middle nav-link"><router-link to="/" class="nav-link align-middle mb-3">Salir</router-link></button>
+                <button @click="salir()" class="nav-item mb-3 align-middle nav-link"><router-link to="/" class="text-danger text-decoration-none align-middle mb-3">Salir</router-link></button>
             </div>
         </div>
     </div>
 </template>
 
 <script>
+import auth from "@/logica/auth"
 
 export default {
   name: "AsideInicio",
   props:{
       msg:String
+  },
+  methods:{
+      salir(){
+          auth.deleteUserLogged()
+      }
   }
   
 };

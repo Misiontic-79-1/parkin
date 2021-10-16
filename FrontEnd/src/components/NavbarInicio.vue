@@ -43,7 +43,7 @@
               </li>
           </ul>
           <div class="d-flex align-items-end text-dark">
-              <span> Nombre de Usuario <i class="fas fa-user-cog"></i></span>
+              <p v-if="userLogged">{{userLogged}} <i class="fas fa-user-cog"></i></p>
           </div>
         </div>
     </nav>
@@ -56,10 +56,16 @@
   </div>
 </template>
 <script>
+import auth from "@/logica/auth"
 export default {
     name: "NavbarInicio",
     props: {
       msg: String
+    },
+    computed:{
+      userLogged(){
+        return auth.getUserLogged();
+      }
     }
 }
 </script>

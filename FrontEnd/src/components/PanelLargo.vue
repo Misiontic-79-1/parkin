@@ -182,25 +182,29 @@
           <h1 >Reservas</h1>
           <scroll-container class="pt-0 w-85 h-350 overflow-auto">
             <div class="d-flex justify-content-center fs-4">
-              <table class="table table table-hover m-0 text-center table-bordered border-secondary">
+              <table class="table table-hover m-0 text-center">
                 <thead>
                   <tr>
-                    <th scope="col">Id_cliente</th>
-                    <th scope="col">Placa_Vehiculo</th>
+                    <th scope="col">Id cliente</th>
+                    <th scope="col">Placa</th>
                     <th scope="col">Contacto</th>
-                    <th scope="col">Fecha_Hora</th>
+                    <th scope="col">Fecha</th>
+                    <th scope="col">Inicia</th>
+                    <th scope="col">Finaliza</th>
                     <th scope="col">Accion</th>
                   </tr>
                 </thead>
 
                 <tbody>
-                  <tr v-for="(item, index) in notas" :key="index">
-                    <th scope="row">{{ item.usuarioId }}</th>
-                    <td>{{ item.nombre }}</td>
-                    <td>{{ item.descripcion }}</td>
-                    <td>{{ item.date }}</td>
+                  <tr v-for="(item, index) in reservas" :key="index">
+                    <th scope="row">{{ item.cedula }}</th>
+                    <td>{{ item.placa }}</td>
+                    <td>{{ item.celular }}</td>
+                    <td>{{ item.fecha }}</td>
+                    <td>{{ item.horaInicio }}</td>
+                    <td>{{ item.horaFin }}</td>
                     <td>
-                      <button type="submit" class="btn btn-primary bg-primary text-white rounded-pill" data-bs-toggle="modal" data-bs-target="#Eliminar">Eliminar</button>
+                      <button type="submit" class="btn btn-primary bg-primary text-white rounded-pill" @click="eleiminarReserva(item._id) ">Eliminar</button>
                     </td>
                   </tr>
                 </tbody>
@@ -217,7 +221,37 @@ export default {
   name:"PanelLargo",
   props:{
     msg: String,
-    nom:String
+    nom:String,
+  },
+  data() {
+    return {
+      reservas: []
+    };
+  },
+  created() {
+    this.listaReservas();
+  },
+  methods:{
+    listaReservas() {
+      this.axios.get("/reservas")
+        .then((res) => {
+          this.reservas = res.data;
+        })
+        .catch((e) => {
+          console.log(e.response);
+        });
+    },
+    eleiminarReserva(id){
+        this.axios.delete(`/reservas/${id}`)
+        .then(res=>{
+          const index=this.reservas.findIndex(item=>item._id===res.data._id);
+          this.reservas.splice(index,1);
+
+        })
+        .catch(e=>{
+            console.log(e,Response);
+        })
+    },
   }
 }
 </script>

@@ -1,6 +1,6 @@
 <template>
-    <div class="IniciarSesion">
-        <div class="modal fade" id="iniciarSesionModal" tabindex="-1" aria-labelledby="iniciarSesionModalLabel" aria-hidden="true">
+    <div class="Login">
+        <div class="m-auto">
             <div class="modal-dialog">
                 <div class="modal-content p-3">
                     <div class="modal-header">
@@ -29,7 +29,7 @@
                                 <input type="checkbox" class="form-check-input" id="recordar">
                                 <label class="form-check-label" for="#recordar">Recordarme</label>
                             </div>
-                            <p v-if="error" class="">Has introducido mal el email o la contraseña.</p>
+                            <p v-if="error" class="text-danger">Has introducido mal el email o la contraseña.</p>
                         </div>
                         <div class="modal-footer justify-content-center">
                             <button type="button" class="btn border text-primary border-primary border-1 rounded-pill" data-bs-toggle="modal" data-bs-target="#registroModal">
@@ -46,14 +46,13 @@
 <script>
 import auth from "@/logica/auth"
 export default {
-  name:"IniciarSesion",
+  name:"Login",
   data: () => ({
     usuario: "",
     password: "",
-    error:false,
+    error:true,
     val:false,
-    val2:false,
-    val3:false
+    val2:false
   }),
   methods: {
       async login(){
@@ -68,11 +67,6 @@ export default {
             this.admins=res.data
             
             })
-            await auth.loginadmin(this.usuario, this.password)
-            .then(res=>{
-            this.admin=res.data
-            
-            })
             this.users.forEach(element => {
                 if (this.usuario===element.usuario) {
                    this.val=true;
@@ -81,11 +75,6 @@ export default {
             this.admins.forEach(element => {
                 if (this.usuario===element.usuario) {
                    this.val2=true;
-                }
-            });
-            this.admin.forEach(element => {
-                if (this.usuario===element.usuario) {
-                   this.val3=true;
                 }
             });
             if (this.val) {
@@ -116,25 +105,8 @@ export default {
                 } 
             });
                 } else {
-                    if (this.val3) {
-                       this.admin.forEach(element => {
-                            if (this.usuario===element.usuario) {
-                                if (this.password===element.password) {
-                                    const userLogged=element.usuario
-                                    const idLogged=element._id 
-                                    auth.setIdLogged(idLogged)
-                                    auth.setUserLogged(userLogged)
-                                        this.$router.push("/Dashboard");
-                                    }else {
-                                        this.error = true;
-                                        this.$router.push("/login");
-                                    }
-                            } 
-                        }); 
-                    } else {
-                        this.error = true;
-                        this.$router.push("/login");                        
-                    }
+                    this.error = true;
+                    this.$router.push("/login");
                 }
                 
             }

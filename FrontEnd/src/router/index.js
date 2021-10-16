@@ -3,9 +3,10 @@ import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
 import Nosotros from "../views/Nosotros.vue";
 import Dashboard from "../views/Dashboard.vue";
-import Gracias from "../views/Gracias.vue";
 import DashboardUser from "../views/DashboardUser.vue";
 import DashboardUser2 from "../views/DashboardUser2.vue";
+import Login from "../views/Login.vue"
+import Gracias from "../views/Gracias.vue"
 Vue.use(VueRouter);
 
 const routes = [
@@ -35,7 +36,12 @@ const routes = [
     component: DashboardUser2,
   },
   {
-    path: "/gracias",
+    path: "/login",
+    name: "login",
+    component: Login,
+  },
+  {
+    path: "/Gracias",
     name: "Gracias",
     component: Gracias,
   },

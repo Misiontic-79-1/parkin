@@ -22,8 +22,8 @@
                     <panel-corto msg="Moto"/>
                     <panel-corto msg="Calendario"/>
                     <panel-largo nom="PlargoReservas"/>
-                    
                 </div>
+                <calendario/>
             </div>
             <div class="tab-pane fade" id="v-pills-Config" role="tabpanel" aria-labelledby="v-pills-Config-tab">
                     <div class="d-flex justify-content-center">
@@ -46,7 +46,11 @@
                 <db-ingresar-modal msg="DbUser"/>
             </div>
             <div class="tab-pane fade" id="v-pills-Reservas" role="tabpanel" aria-labelledby="v-pills-Reservas-tab">
-                <p><strong>This is some placeholder content the reservas tab's associated content.</strong> Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content visibility and styling. You can use it with tabs, pills, and any other <code>.nav</code>-powered navigation.</p>
+                <div class="d-flex flex-column px-4 py-5">
+                    <reservar/>
+                    <reserva-parcial/>
+                    <reserva-total/>
+                </div>
             </div>
             <div class="tab-pane fade" id="v-pills-Config" role="tabpanel" aria-labelledby="v-pills-Config-tab">
                     <p><strong>This is some placeholder content the Configuracion tab's associated content.</strong> Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content visibility and styling. You can use it with tabs, pills, and any other <code>.nav</code>-powered navigation.</p>
@@ -73,12 +77,16 @@
 </template>
 
 <script>
+import Calendario from './Calendario.vue'
 import ConfigPanel from './ConfigPanel.vue'
 import DbFacturarModal from './DbFacturarModal.vue'
 import DbIngresarModal from './DbIngresarModal.vue'
 import NavbarInicio from './NavbarInicio.vue'
 import PanelCorto from './PanelCorto.vue'
 import PanelLargo from './PanelLargo.vue'
+import ReservaParcial from './ReservaParcial.vue'
+import Reservar from './Reservar.vue'
+import ReservaTotal from './ReservaTotal.vue'
 export default {
     name:"DbTabs",
     components:{
@@ -88,6 +96,10 @@ export default {
         DbIngresarModal,
         NavbarInicio,
         ConfigPanel,
+        Calendario,
+        Reservar,
+        ReservaParcial,
+        ReservaTotal,
         
     },
     props:{

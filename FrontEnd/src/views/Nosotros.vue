@@ -5,6 +5,7 @@
       <pie-pagina/>
       <iniciar-sesion/>
       <registro-inicio/>
+      <reserva-parcial msg="free"/>
       <div class="d-flex justify-content-center p-4 margen-top margen-left">
         <div class="p-4">
           <div class="d-flex text-center">
@@ -25,6 +26,7 @@ import NavbarInicio from '@/components/NavbarInicio.vue'
 import PiePagina from '@/components/PiePagina.vue'
 import RegistroInicio from '@/components/RegistroInicio.vue'
 import SeccionArticulo from '@/components/SeccionArticulo.vue'
+import ReservaParcial from '../components/ReservaParcial.vue'
 
 export default {
   name:"Nosotros",
@@ -34,7 +36,8 @@ export default {
     PiePagina,
     IniciarSesion,
     RegistroInicio,
-    SeccionArticulo
+    SeccionArticulo,
+    ReservaParcial
    },
 
 };

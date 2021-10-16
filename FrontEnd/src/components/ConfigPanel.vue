@@ -242,7 +242,6 @@
 </template>
 
 <script >
-
 export default {
   name: "ConfigPanel",
   props:{
@@ -266,8 +265,7 @@ export default {
   },
   methods: {
     listarUsuarios() {
-      this.axios
-        .get("/adminusuarios")
+      this.axios.get("/adminusuarios")
         .then((res) => {
           this.usuarios = res.data;
         })
