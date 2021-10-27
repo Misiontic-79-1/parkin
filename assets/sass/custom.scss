@@ -1,0 +1,80 @@
+$primary: #FF6600;
+$secondary: #003EA8;
+$light: #D1E1EC;
+$dark:  #E7F0F6;
+
+
+.margen-left{
+	margin-left: 15% !important;
+}
+.w-15{
+	width: 15% !important;
+}
+.w-85{
+	width: 85% !important;
+}
+.margen-top{
+	margin-top: 78px !important;
+}
+
+a:hover {
+	color: #FF6600 !important;
+}
+
+.btn-primary {
+	border: none;
+}
+
+.rounded-4{
+	border-radius: 15px;
+}
+
+.h-500{
+	height: 520px;
+}
+
+.btn-primary:hover {
+    color: #fff !important;
+	background-color: #003EA8 !important;
+    border: none;
+}
+
+.btn-outline-primary:hover {
+	background-color: #003EA8 !important;
+	border: 1px solid #003EA8 !important;
+}
+
+.navbar-custom {
+	box-shadow: 5px 5px 10px rgba(51, 75, 117, 0.2);
+	padding: 10px 0 10px 0;
+}
+
+body {
+	font-family: 'Roboto condensed', sans-serif;
+	padding: 0;
+}
+
+h1,
+h2,
+h4,
+h3 {
+	font-family: 'Anton', sans-serif;
+	font-weight: 300;
+}
+
+.contenedor {
+	align-content: center;
+	box-shadow: 5px 5px 10px rgba(51, 75, 117, 0.2);
+	border-radius: 15px;
+}
+
+.footer {
+	text-align: center;
+	padding: 20px;
+	margin: 0!important;
+	position: fixed;
+	bottom: 0;
+}
+
+
+@import "../../node_modules/bootstrap/scss/bootstrap";
