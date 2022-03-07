@@ -1,0 +1,16 @@
+{
+  "name": "bootstrap",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "bootstrap": "^5.1.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "build": "purgecss --css assets/css/custom.css --content index.html nosotros.html node_modules/bootstrap/dist/js/bootstrap.bundle.js -o assets/css/reducido.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

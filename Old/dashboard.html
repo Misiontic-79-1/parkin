@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="Lineer Rolong, Narayana Galvis">
+      <title>Yo Parqueo</title>
+	  <link rel="icon" href="img//Icon.svg" type="image/png">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Anton&family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+      
+      <link rel="stylesheet" type="text/css" href="./Estilo.css">
+   </head>
+   <body>
+      <main>
+         <div class="menu-lateral">
+            <div id="Logo">
+               <a href="dashboard.html"><img id="Imagen" src="img//logo-app.svg" alt="Logo" title="Logo"></a>
+            </div>
+            <div class="menu-lateral_item backgroundblue">
+               <a class="textwhite" href="dashboard.html">Tablero Principal</a>
+            </div>
+            <div class="menu-lateral_item">
+               <a class="textblue" href="dashboard.html">Estadisticas</a>
+            </div>
+            <div class="menu-lateral_item">
+               <a class="textblue" href="dashboard.html">Reservas</a>
+            </div>
+            <div class="menu-lateral_item">
+               <a class="textblue" href="dashboard.html">Casillero</a>
+            </div>
+            <div class="menu-lateral_item">
+               <a class="textblue" href="dashboard-config.html">Configuracion</a>
+            </div>
+            <div class="menu-lateral_item">
+               <a class="textblue" href="dashboard.html">Salir</a>
+            </div>
+            
+         </div>
+         <div id="contenedor_pp">
+            <nav class="navbar-db">
+               <ul class="menu">
+                  <li><img src="img//icono-parqueadero.png"/> Parqueaderos disponibles</li>
+                  <li><img src="img//icono-carro.png"/> Tu ubicacion actual</li>
+                  <li><input type="search" name="busqueda" placeholder="Ingresa una dirección" class="input-text"><button type="submit" value="" id="button" name="button"><i class="fas fa-search"></i></button>
+                  </li>
+                  <li class="textblue">Limpiar</li>
+               </ul>
+            </nav>
+            <div class="contenedor">
+               <div class="item-panel">
+                  <div>Miércoles 11 de septiembre</div>
+                  <div class="fuente-reloj">14:03</div>
+               </div>
+               <div class="item-panel fondo-carros">
+                  <div>Celdas disponibles Carro</div>
+                  <div class="fuente-vehiculo"><i class="fas fa-car"></i>9/15</div>
+               </div>
+               <div class="item-panel fondo-motos">
+                  <div>Celdas disponibles Moto</div>
+                  <div class="fuente-vehiculo"><i class="fas fa-motorcycle"></i>9/15</div>
+               </div>
+               <div class="item-panel fondo-placa">
+                  <div class="ingresar-placa"><input type="text" id="name" name="name" required
+                     minlength="" maxlength="" size="" placeholder="Placa"></div>
+                  <div><a href="#"><input class ="textwhite" id="Registrarme" type="button" value="Ingresar" ></a></div>
+               </div>
+               <div class="contenedor-panel-largo">
+                  <div class="contenedor-selector">
+                     <ul id="selector">
+                        <li>VER</li>
+                        <li><a class="activo" href="dashboard.html"><i class="fas fa-car"></i></a></li>
+                        <li><a href="dashboard-moto.html"><i class="fas fa-motorcycle"></a></i></li>
+                     </ul>
+                  </div>
+                  <div class="item-panel-largo">
+                     <div class="item-carro imagen_carro_disponible">
+                        <span class="id_parqueadero">1</span>
+                     </div>
+                     <div class="item-carro imagen_carro_disponible">
+                        <span class="id_parqueadero">2</span>
+                     </div>
+                     <div class="item-carro imagen_carro_disponible">
+                        <span class="id_parqueadero">3</span>
+                     </div>
+                     <div class="item-carro imagen_carro_disponible">
+                        <span class="id_parqueadero">4</span>
+                     </div>
+                     <div class="item-carro imagen_carro_disponible">
+                        <span class="id_parqueadero">5</span>
+                     </div>
+                     <div class="item-carro imagen_carro_ocupado">
+                        <span class="id_parqueadero">6</span>
+                     </div>
+                     <div class="item-carro imagen_carro_ocupado">
+                        <span class="id_parqueadero">7</span>
+                     </div>
+                     <div class="item-carro imagen_carro_ocupado">
+                        <span class="id_parqueadero">8</span>
+                     </div>
+                     <div class="item-carro imagen_carro_ocupado">
+                        <span class="id_parqueadero">9</span>
+                     </div>
+                     <div class="item-carro imagen_carro_ocupado">
+                        <span class="id_parqueadero">10</span>
+                     </div>
+                     <div class="item-carro imagen_carro_ocupado">
+                        <span class="id_parqueadero">11</span>
+                     </div>
+                     <div class="item-carro imagen_carro_ocupado">
+                        <span class="id_parqueadero">12</span>
+                     </div>
+                     <div class="item-carro imagen_carro_ocupado">
+                        <span class="id_parqueadero">13</span>
+                     </div>
+                     <div class="item-carro imagen_carro_ocupado">
+                        <span class="id_parqueadero">14</span>
+                     </div>
+                     <div class="item-carro imagen_carro_ocupado">
+                        <span class="id_parqueadero">15</span>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </main>
+   </body>
+</html>
