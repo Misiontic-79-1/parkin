@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="keywords" content="">
+        <meta name="description" content="">
+        <meta name="author" content="Lineer Rolong, Narayana Galvis">
+        <title>Yo Parqueo</title>
+        <link rel="icon" href="assets/svg/Icon.svg" type="image/svg">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Anton&family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+        <link rel="stylesheet" type='text/css' href="./assets/sass/custom.css">
+        <script src='node_modules/bootstrap/js/dist/base-component.js'></script>
+    </head>
+    <body class="bg-dark">
+        <div class="container-fluid">
+        <div class="row flex-nowrap">
+            <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 text-dark bg-white position-fixed w-15">
+                <div class="d-flex flex-column justify-content-center align-items-center pt-2 text-white min-vh-100 d-none d-sm-block">
+                    <a href="/" class="text-secondary nav-link d-flex justify-content-center" aria-current="page">
+                        <img class=" p-2 w-80" src="assets/svg/logo-app.svg" />
+                    </a>
+                    <hr class="bg-light opacity-100">
+                    <ul class="nav nav-pills flex-column align-items-center" id="menu">
+                        <li class="nav-item mb-3">
+                            <a href="dashboard.html" class="nav-link align-middle">
+                            <span>Tablero Principal</span>
+                            </a>
+                        </li>
+                        <li class="nav-item mb-3">
+                            <a href="" class="nav-link align-middle">
+                            <span>Estadisticas</span>
+                            </a>
+                        </li>
+                        <li class="nav-item mb-3">
+                            <a href="" class="nav-link align-middle">
+                            <span>Reservas</span>
+                            </a>
+                        </li>
+                        <li class="nav-item mb-3">
+                            <a href="configuracion.html" class="  nav-link align-middle active">
+                            <span>Configuracion</span>
+                            </a>
+                        </li>
+                        <li class="nav-item mb-3">
+                            <a href="" class=" text-danger nav-link align-middle">
+                            <span>Salir</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        <div class="col p-0 margen-left">
+            <nav class="navbar navbar-custom bg-secondary navbar-expand-lg navbar-light position-fixed w-85">
+                <div class="container-fluid fw-bold">
+                    <ul class="navbar-nav p-2">
+                        <li class="nav-item">
+                            <span class="nav-link text-white"><img src="assets/img/icono-parqueadero.png" /> Nombre Parqueadero</span>
+                        </li>
+                    </ul>
+                    <div class="d-flex align-items-end text-white">
+                        <span> Nombre de Usuario <i class="fas fa-user-cog"></i></span>
+                     </div>
+                </div>
+            </nav>
+            <div class="d-flex justify-content-center margen-top">
+                <div class="w-85">                
+                    <nav>
+                        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                        <button class="nav-link active" id="nav-config_par-tab" data-bs-toggle="tab" data-bs-target="#nav-gonfig_par" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Configuracion de parqueadero</button>
+                        <button class="nav-link" id="nav-config_user-tab" data-bs-toggle="tab" data-bs-target="#nav-config_user" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Configuración usuarios del sistema</button>
+                        </div>
+                    </nav>
+                    <div class="tab-content bg-white h-auto" id="nav-tabContent">
+                        <div class="tab-pane fade show active" id="nav-gonfig_par" role="tabpanel" aria-labelledby="nav-config_par-tab">
+                            <div class="container-fluid p-5">
+
+                                <form class="row g-3">
+                                    
+                                    <div class="col-md-6">
+                                        <label for="usuario" class="form-label">Usuario</label>
+                                        <div class="input-group">
+                                          <div class="input-group-text">@</div>
+                                          <input type="text" class="form-control" id="usuario" placeholder="Nombre de usuario administrador">
+                                        </div>
+                                      </div>
+
+                                      <div class="col-md-6">
+                                        <label for="inputEmail4" class="form-label">Correo Electrónico</label>
+                                        <input type="email" class="form-control" id="inputEmail4">
+                                      </div>
+
+                                    <div class="col-md-6">
+                                      <label for="inputPassword4" class="form-label">Contraseña</label>
+                                      <input type="password" class="form-control" id="inputPassword4">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="confirmarContrasenia" class="form-label">Confirmar Contraseña</label>
+                                        <input type="password" class="form-control" id="confirmarContrasenia">
+                                      </div>
+                                    <div class="col-6">
+                                      <label for="inputAddress" class="form-label">Dirección Parqueadero</label>
+                                      <input type="text" class="form-control" id="inputAddress" placeholder="">
+                                    </div>
+                                    <div class="col-6">
+                                      <label for="inputAddress2" class="form-label">Otras indicaciones</label>
+                                      <input type="text" class="form-control" id="inputAddress2" placeholder="Ej. Diagonal al CC">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="inputState" class="form-label">Departamento</label>
+                                        <select id="inputState" class="form-select">
+                                          <option selected>Seleccionar...</option>
+                                          <option>...</option>
+                                        </select>
+                                      </div>
+                                    <div class="col-md-6">
+                                      <label for="inputCity" class="form-label">Ciudad</label>
+                                      <select id="inputCity" class="form-select">
+                                        <option selected>Seleccionar...</option>
+                                        <option>...</option>
+                                      </select>
+                                    </div>
+
+                                    <div class="col-6">
+                                        <label for="celdasCarro" class="form-label">Celdas Carro</label>
+                                        <input type="number" class="form-control" id="celdasCarro" placeholder="Total celdas disponibles">
+                                      </div>
+                                      <div class="col-6">
+                                        <label for="celdasMoto" class="form-label">Celdas Moto</label>
+                                        <input type="number" class="form-control" id="celdasMoto" placeholder="Total celdas disponibles">
+                                      </div>
+                                    
+                                    <div class="col-md-6">
+                                        <label class="form-label" for="horario">Horario Parqueadero</label>
+                                        <select class="form-select" id="horario">
+                                          <option selected>Seleccionar...</option>
+                                          <option value="">24 horas</option>
+                                      <option value="">8:00 AM - 5:00 PM</option>
+                                      <option value="">5:00 AM - 10:00 PM</option>
+                                        </select>
+                                      </div>
+                                   
+								   
+								   <div class="col-12 d-flex justify-content-end">
+                                      <button type="submit" class="btn btn-primary text-dark rounded-pill ">Guardar</button>
+                                    </div>
+                                  </form>
+								   
+                                    </div>
+                                    
+
+                           
+            
+                        </div>
+                        <div class="tab-pane fade p-3" id="nav-config_user" role="tabpanel" aria-labelledby="nav-config_user-tab">
+                            <div class="h-350 p-2 overflow-auto">
+                                <table class="table table-hover m-0 text-center">
+                                    <thead class="table-secondary" >
+                                    <tr>
+                                        <th scope="col">ID</th>
+                                        <th scope="col">Nombre</th>
+                                        <th scope="col">Usuario</th>
+                                        <th scope="col">Contraseña</th>
+                                        <th scope="col">Tipo de usuario</th>
+                                        <th scope="col">Accioin</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <th scope="row">1</th>
+                                        <td>Usuario1</td>
+                                        <td>Usuario1</td>
+                                        <td>Contraseña</td>
+                                        <td>Administrador</th>
+                                        <th>
+                                            <button type="submit" class="btn btn-primary bg-primary text-white rounded-pill">Editar</button>
+                                            <button type="submit" class="btn btn-primary bg-primary text-white rounded-pill">Eliminar</button>
+                                        </th>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">2</th>
+                                        <td>Usuario1</td>
+                                        <td>Usuario1</td>
+                                        <td>Contraseña</td>
+                                        <td>Administrador</th>
+                                        <th>
+                                            <button type="submit" class="btn btn-primary bg-primary text-white rounded-pill">Editar</button>
+                                            <button type="submit" class="btn btn-primary bg-primary text-white rounded-pill">Eliminar</button>
+                                        </th>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">3</th>
+                                        <td>Usuario1</td>
+                                        <td>Usuario1</td>
+                                        <td>Contraseña</td>
+                                        <td>Administrador</th>
+                                        <th>
+                                            <button type="submit" class="btn btn-primary bg-primary text-white rounded-pill">Editar</button>
+                                            <button type="submit" class="btn btn-primary bg-primary text-white rounded-pill">Eliminar</button>
+                                        </th>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="d-flex justify-content-end">
+                                <button type="submit" class="btn btn-primary bg-primary text-white rounded-pill">Agregar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            <footer class="footer bg-secondary text-white w-100 py-2">
+               <span>© 2021 YoParqueo - todos los derechos reservados</span>
+            </footer>
+        </div>
+        </div>
+        <!-- Modal iniciar sesión -->
+        <div class="modal fade" id="iniciarSesionModal" tabindex="-1" aria-labelledby="iniciarSesionModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content p-3">
+                    <div class="modal-header">
+                        <h3 class="text-primary">Inicia sesion</h3>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <form>
+                        <div class="modal-body">
+                            <div class="text-center">
+                                <a href="#">
+                                <img class=" p-2 w-80" src="assets/svg/logo-app.svg" />
+                                </a>
+                            </div>
+                            <div class="mb-3">
+                                <div id="ayudaCorreo" class="form-text">Ingresa tus datos para iniciar sessión
+                                </div>
+                                <label for="correo" class="form-label">Correo</label>
+                                <input type="email" class="form-control" id="correo"
+                                aria-describedby="ayudaCorreo">
+                            </div>
+                            <div class="mb-3">
+                                <label for="contrasena" class="form-label">Contraseña</label>
+                                <input type="password" class="form-control" id="contrasena">
+                            </div>
+                            <div class="mb-3 form-check">
+                                <input type="checkbox" class="form-check-input" id="recordar">
+                                <label class="form-check-label" for="recordar">Recordarme</label>
+                            </div>
+                        </div>
+                        <div class="modal-footer justify-content-center">
+                            <button type="button" class="btn border text-primary border-primary border-1 rounded-pill"
+                                data-bs-dismiss="modal">Registrarme</button>
+                            <button type="submit" class="btn btn-primary bg-primary text-white rounded-pill">Iniciar sessión</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- Modal Registro -->
+        <div class="modal fade" id="registroModal" tabindex="-1" aria-labelledby="registroModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content p-3">
+                    <div class="modal-header">
+                        <h3 class="text-primary">Crea tu cuenta</h3>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <form>
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col-md-12 text-center mb-3">
+                                    <a href="#">
+                                        <img class=" p-2 w-80" src="assets/svg/logo-app.svg" />
+                                    </a>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="registrarNombre" class="form-label">Nombre</label>
+                                    <input type="text" class="form-control" id="registrarNombre">
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="registrarCorreo" class="form-label">Email</label>
+                                    <input type="email" class="form-control" id="registrarCorreo">
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="registrarContrasena" class="form-label">Contraseña</label>
+                                    <input type="password" class="form-control" id="registrarContrasena">
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="confirmarContrasena" class="form-label">Confirmar contraseña</label>
+                                    <input type="password" class="form-control" id="confirmarContrasena">
+                                </div>
+                                <div class="col-md-12 mb-3">
+                                    <label for="registrarCel" class="form-label">Celular</label>
+                                    <input type="text" class="form-control" id="registrarCel">
+                                </div>
+                            </div>
+                            <div class="mb-3 form-check">
+                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                <label class="form-check-label" for="exampleCheck1">Recordarme</label>
+                            </div>
+                        </div>
+                        <div class="modal-footer justify-content-center">
+                            <button type="button" class="btn text-primary border border-primary border-1 rounded-pill"
+                                data-bs-dismiss="modal">Registrarme</button>
+                            <button type="submit" class="btn btn-primary bg-primary text-white rounded-pill">Iniciar sessión</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </body>
+   <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</html>
+
